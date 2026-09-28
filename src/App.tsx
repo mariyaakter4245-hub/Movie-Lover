@@ -12,6 +12,7 @@ import { MovieGrid } from './components/MovieGrid';
 import { MovieDetailModal } from './components/MovieDetailModal';
 import { RequestMovieModal } from './components/RequestMovieModal';
 import { BookmarksModal } from './components/BookmarksModal';
+import { AttentionNoticeModal } from './components/AttentionNoticeModal';
 import { AdminPanel } from './components/AdminPanel';
 import { AdminLoginModal } from './components/AdminLoginModal';
 import { AdBanner } from './components/AdBanner';
@@ -383,6 +384,9 @@ export default function App() {
         onRemoveBookmark={(id, e) => handleToggleBookmark(id, e)}
         onClearAll={handleClearAllBookmarks}
       />
+
+      {/* Attention Notice Modal (MovieBaaz Authentic) */}
+      <AttentionNoticeModal telegramUrl={settings?.telegramChannel || 'https://t.me/+pv7RFxweVzA3ZmFl'} />
 
       {/* Admin Login PIN Modal */}
       <AdminLoginModal

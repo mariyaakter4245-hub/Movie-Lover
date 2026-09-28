@@ -2,456 +2,1248 @@ import { Movie, AdsConfig, SiteSettings } from '../types';
 
 export const INITIAL_MOVIES: Movie[] = [
   {
-    id: "pushpa-2-the-rule-2024",
-    title: "Pushpa 2: The Rule",
-    year: 2024,
-    category: "South Hindi Dubbed",
-    genres: ["Action", "Crime", "Drama", "Thriller"],
-    rating: 8.1,
-    duration: "3h 24m",
-    quality: "1080p WEB-DL",
-    audio: "Hindi (Clean HQ) + Telugu (Dual Audio)",
-    subtitles: "English [ESub]",
-    fileSize: "2.8 GB / 1.4 GB / 650 MB",
-    poster: "/images/poster_historical_epic.jpg",
-    backdrop: "/images/hero_movie_banner.jpg",
-    director: "Sukumar",
-    cast: "Allu Arjun, Rashmika Mandanna, Fahadh Faasil, Sunil",
-    storyline: "Pushpa Raj establishes an unassailable grip over the red sandalwood syndicate across international borders. However, Bhanwar Singh Shekhawat IPS vows retribution, sparking an explosive clash of dominance, power, and ego.",
-    isFeatured: true,
-    isTrending: true,
-    trailerUrl: "https://www.youtube.com/embed/g3JUbgFBWu8",
-    streamServers: [
-      { name: "Server 1 (Fast HD)", url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" },
-      { name: "Server 2 (Multi-Quality)", url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" },
-      { name: "Server 3 (Ultra Speed)", url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" }
+    "id": "pushpa-2-the-rule-2024",
+    "title": "Pushpa 2: The Rule (2024) Hindi Dubbed WEB-DL – 480P | 720P | 1080P",
+    "year": 2024,
+    "category": "Hindi Dubbed",
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller"
     ],
-    downloadLinks: [
+    "rating": 8.1,
+    "duration": "3h 24m",
+    "quality": "1080p | 720p | 480p WEB-DL",
+    "audio": "Hindi (Clean HQ) + Telugu (Dual Audio)",
+    "subtitles": "English [ESub]",
+    "fileSize": "2.8 GB / 1.4 GB / 650 MB",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMjY5YWVjMWQtOTk2OC00MDc1LWJjMmYtODg3NWQ1ZTYzZTFjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "backdrop": "https://m.media-amazon.com/images/M/MV5BMjY5YWVjMWQtOTk2OC00MDc1LWJjMmYtODg3NWQ1ZTYzZTFjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "director": "Sukumar",
+    "cast": "Allu Arjun, Rashmika Mandanna, Fahadh Faasil",
+    "storyline": "Pushpa Raj establishes an unassailable grip over the red sandalwood syndicate across international borders.",
+    "isFeatured": true,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/g3JUbgFBWu8",
+    "streamServers": [
       {
-        quality: "480p SD",
-        size: "650 MB",
-        resolution: "854x480",
-        servers: [
-          { name: "Fast Google Drive", url: "https://moviebaaz.baby/download/pushpa2-480p-gdrive", speed: "Lightning 100MB/s" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/pushpa2-480p-hubcloud", speed: "High Speed" },
-          { name: "Mega Server", url: "https://moviebaaz.baby/download/pushpa2-480p-mega", speed: "Fast" }
+        "name": "Server 1 (Fast HD)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "650 MB",
+        "resolution": "854x480",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/pushpa-480"
+          }
         ]
       },
       {
-        quality: "720p HD",
-        size: "1.4 GB",
-        resolution: "1280x720 (x264/HEVC)",
-        servers: [
-          { name: "Fast Google Drive", url: "https://moviebaaz.baby/download/pushpa2-720p-gdrive", speed: "Lightning 100MB/s" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/pushpa2-720p-hubcloud", speed: "High Speed" },
-          { name: "Fast Cloud Mirror", url: "https://moviebaaz.baby/download/pushpa2-720p-cloud", speed: "Fast" }
+        "quality": "720p HD",
+        "size": "1.4 GB",
+        "resolution": "1280x720",
+        "servers": [
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/pushpa-720"
+          }
         ]
       },
       {
-        quality: "1080p FHD [Recommended]",
-        size: "2.8 GB",
-        resolution: "1920x1080 (10-Bit ESub)",
-        servers: [
-          { name: "Fast Google Drive (VIP)", url: "https://moviebaaz.baby/download/pushpa2-1080p-gdrive", speed: "Lightning 100MB/s" },
-          { name: "HubCloud Ultra Direct", url: "https://moviebaaz.baby/download/pushpa2-1080p-hubcloud", speed: "High Speed" },
-          { name: "1-Click Direct Link", url: "https://moviebaaz.baby/download/pushpa2-1080p-direct", speed: "Instant" }
-        ]
-      },
-      {
-        quality: "4K UHD HDR",
-        size: "7.2 GB",
-        resolution: "3840x2160 Dolby Atmos",
-        servers: [
-          { name: "Torrent Magnet", url: "magnet:?xt=urn:btih:moviebaaz-pushpa2-4k", speed: "Peer-to-Peer" },
-          { name: "Mega Direct VIP", url: "https://moviebaaz.baby/download/pushpa2-4k-mega", speed: "VIP Server" }
+        "quality": "1080p FHD",
+        "size": "2.8 GB",
+        "resolution": "1920x1080",
+        "servers": [
+          {
+            "name": "Fast Google Drive (VIP)",
+            "url": "https://moviebaaz.baby/pushpa-1080"
+          }
         ]
       }
     ],
-    screenshots: [
-      "/images/hero_movie_banner.jpg",
-      "/images/poster_historical_epic.jpg"
+    "screenshots": [
+      "https://m.media-amazon.com/images/M/MV5BMjY5YWVjMWQtOTk2OC00MDc1LWJjMmYtODg3NWQ1ZTYzZTFjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     ],
-    createdAt: "2025-01-10T12:00:00.000Z"
+    "createdAt": "2026-09-28T15:51:23.979Z"
   },
   {
-    id: "kalki-2898-ad-2024",
-    title: "Kalki 2898 AD",
-    year: 2024,
-    category: "South Hindi Dubbed",
-    genres: ["Action", "Sci-Fi", "Fantasy", "Adventure"],
-    rating: 7.8,
-    duration: "3h 01m",
-    quality: "1080p WEB-DL",
-    audio: "Hindi (Original) + Telugu + Tamil",
-    subtitles: "English [MSubs]",
-    fileSize: "3.1 GB / 1.5 GB / 700 MB",
-    poster: "/images/poster_action_sci.jpg",
-    backdrop: "/images/hero_movie_banner.jpg",
-    director: "Nag Ashwin",
-    cast: "Prabhas, Amitabh Bachchan, Kamal Haasan, Deepika Padukone",
-    storyline: "In the dystopian desert city of Kasi in the year 2898 AD, ruled by the tyrannical god-king Supreme Yaskin, a pregnant refugee carries the hope of humanity's rebirth as an ancient warrior rises to protect her.",
-    isFeatured: true,
-    isTrending: true,
-    trailerUrl: "https://www.youtube.com/embed/kQDd1AhGIHk",
-    streamServers: [
-      { name: "Server 1 (Fast HD)", url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" },
-      { name: "Server 2 (Multi-CDN)", url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" }
+    "id": "toofan-2024-bangla",
+    "title": "Toofan (তুফান) (2024) Bangla Chorki WEB-DL – 480P | 720P | 1080P – Download & Watch Online",
+    "year": 2024,
+    "category": "Bangladeshi",
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller"
     ],
-    downloadLinks: [
+    "rating": 7.9,
+    "duration": "2h 25m",
+    "quality": "1080p | 720p | 480p WEB-DL",
+    "audio": "Bengali (Clean Audio 5.1)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "2.1 GB / 1.1 GB / 450 MB",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYzA2ZDZlZjgtNGRjOC00N2Y5LWIxNmUtODc3MzMwY2Y3OTNmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "backdrop": "https://m.media-amazon.com/images/M/MV5BYzA2ZDZlZjgtNGRjOC00N2Y5LWIxNmUtODc3MzMwY2Y3OTNmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "director": "Raihan Rafi",
+    "cast": "Shakib Khan, Mimi Chakraborty, Chanchal Chowdhury",
+    "storyline": "The ruthless rise and bloodstained criminal career of Galib, a reckless small-time criminal who ascends to become the most dreaded mafia don Toofan.",
+    "isFeatured": true,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/n43jXpI2W44",
+    "streamServers": [
       {
-        quality: "480p SD",
-        size: "700 MB",
-        resolution: "854x480",
-        servers: [
-          { name: "Fast Google Drive", url: "https://moviebaaz.baby/download/kalki-480p-gdrive", speed: "Fast" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/kalki-480p-hubcloud", speed: "High Speed" }
+        "name": "Server 1 (Fast HD)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
+      }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "450 MB",
+        "resolution": "854x480",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/toofan-480"
+          }
         ]
       },
       {
-        quality: "720p HD HEVC",
-        size: "1.5 GB",
-        resolution: "1280x720",
-        servers: [
-          { name: "Fast Google Drive", url: "https://moviebaaz.baby/download/kalki-720p-gdrive", speed: "Lightning 100MB/s" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/kalki-720p-hubcloud", speed: "High Speed" }
+        "quality": "720p HD",
+        "size": "1.1 GB",
+        "resolution": "1280x720",
+        "servers": [
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/toofan-720"
+          }
         ]
       },
       {
-        quality: "1080p FHD",
-        size: "3.1 GB",
-        resolution: "1920x1080 60FPS",
-        servers: [
-          { name: "Fast Google Drive (VIP)", url: "https://moviebaaz.baby/download/kalki-1080p-gdrive", speed: "Lightning 100MB/s" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/kalki-1080p-hubcloud", speed: "High Speed" }
+        "quality": "1080p FHD",
+        "size": "2.1 GB",
+        "resolution": "1920x1080",
+        "servers": [
+          {
+            "name": "Fast Google Drive (VIP)",
+            "url": "https://moviebaaz.baby/toofan-1080"
+          }
         ]
       }
     ],
-    screenshots: [
-      "/images/poster_action_sci.jpg"
+    "screenshots": [
+      "https://m.media-amazon.com/images/M/MV5BYzA2ZDZlZjgtNGRjOC00N2Y5LWIxNmUtODc3MzMwY2Y3OTNmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     ],
-    createdAt: "2025-01-08T10:00:00.000Z"
+    "createdAt": "2026-09-28T13:51:23.979Z"
   },
   {
-    id: "stree-2-2024",
-    title: "Stree 2: Sarkate Ka Aatank",
-    year: 2024,
-    category: "Bollywood",
-    genres: ["Comedy", "Horror"],
-    rating: 7.4,
-    duration: "2h 27m",
-    quality: "1080p WEB-DL",
-    audio: "Hindi (Dolby Digital 5.1)",
-    subtitles: "English [ESubs]",
-    fileSize: "2.3 GB / 1.2 GB / 550 MB",
-    poster: "/images/poster_detective_thriller.jpg",
-    backdrop: "/images/hero_movie_banner.jpg",
-    director: "Amar Kaushik",
-    cast: "Rajkummar Rao, Shraddha Kapoor, Pankaj Tripathi, Abhishek Banerjee",
-    storyline: "The quiet town of Chanderi is besieged by a terrifying headless ghost known as Sarkata, kidnapping progressive women. Vicky and his eccentric band of friends must team up with Stree to save their town.",
-    isFeatured: true,
-    isTrending: true,
-    trailerUrl: "https://www.youtube.com/embed/KVnhe0eBf5w",
-    streamServers: [
-      { name: "Server 1 (Fast HD)", url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" }
+    "id": "moviebaaz-7793",
+    "title": "Anacondas The Hunt for the Blood Orchid (2004) Dual Audio [Hindi+English] Blu-Ray – 480P | 720P | 1080P – 300MB | 1GB | 2.5GB | 7.3GB – Download & Watch Online",
+    "year": 2004,
+    "category": "Dual & Multi Audio",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
     ],
-    downloadLinks: [
+    "rating": 7,
+    "duration": "2h 18m",
+    "quality": "1080p | 720p | 480p WEB-DL",
+    "audio": "Hindi + English (Dual Audio)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "2.4 GB / 1.2 GB / 500 MB",
+    "poster": "https://i.postimg.cc/XJbffjm9/images-103.jpg",
+    "backdrop": "https://i.postimg.cc/XJbffjm9/images-103.jpg",
+    "director": "MovieBaaz Releases",
+    "cast": "Starring Cast & Crew",
+    "storyline": "Anacondas The Hunt for the Blood Orchid (2004) Dual Audio [Hindi+English] Blu-Ray – 480P | 720P | 1080P – 300MB | 1GB | 2.5GB | 7.3GB – Download & Watch Online - Official high speed download link and online stream. Fast Google Drive, HubCloud, and Mega mirrors.",
+    "isFeatured": true,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/g3JUbgFBWu8",
+    "streamServers": [
       {
-        quality: "480p SD",
-        size: "550 MB",
-        resolution: "854x480",
-        servers: [
-          { name: "Fast Google Drive", url: "https://moviebaaz.baby/download/stree2-480p-gdrive", speed: "Fast" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/stree2-480p-hubcloud", speed: "High Speed" }
+        "name": "Server 1 (Fast HD)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      },
+      {
+        "name": "Server 2 (Multi-Quality)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "450 MB",
+        "resolution": "854x480 (x264)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/7793-480",
+            "speed": "High Speed"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/7793-hub-480",
+            "speed": "Instant"
+          }
         ]
       },
       {
-        quality: "720p HD",
-        size: "1.2 GB",
-        resolution: "1280x720",
-        servers: [
-          { name: "Fast Google Drive", url: "https://moviebaaz.baby/download/stree2-720p-gdrive", speed: "Fast" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/stree2-720p-hubcloud", speed: "High Speed" }
+        "quality": "720p HD",
+        "size": "1.2 GB",
+        "resolution": "1280x720 (HEVC)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/7793-720",
+            "speed": "100MB/s"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/7793-hub-720",
+            "speed": "Instant"
+          }
         ]
       },
       {
-        quality: "1080p FHD",
-        size: "2.3 GB",
-        resolution: "1920x1080",
-        servers: [
-          { name: "Fast Google Drive (VIP)", url: "https://moviebaaz.baby/download/stree2-1080p-gdrive", speed: "High Speed" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/stree2-1080p-hubcloud", speed: "High Speed" }
+        "quality": "1080p FHD",
+        "size": "2.4 GB",
+        "resolution": "1920x1080 (HQ)",
+        "servers": [
+          {
+            "name": "Fast Google Drive (VIP)",
+            "url": "https://moviebaaz.baby/download/7793-1080",
+            "speed": "VIP Mirror"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/7793-hub-1080",
+            "speed": "Instant"
+          }
         ]
       }
     ],
-    screenshots: [
-      "/images/poster_detective_thriller.jpg"
+    "screenshots": [
+      "https://i.postimg.cc/XJbffjm9/images-103.jpg"
     ],
-    createdAt: "2025-01-05T08:00:00.000Z"
+    "createdAt": "2026-09-28T15:51:23.978Z"
   },
   {
-    id: "toofan-2024-bengali",
-    title: "Toofan (তুফান)",
-    year: 2024,
-    category: "Bengali Movies",
-    genres: ["Action", "Crime", "Thriller"],
-    rating: 7.9,
-    duration: "2h 25m",
-    quality: "1080p WEB-DL",
-    audio: "Bengali (Clean Audio 5.1)",
-    subtitles: "English [ESubs]",
-    fileSize: "2.1 GB / 1.1 GB / 450 MB",
-    poster: "/images/poster_detective_thriller.jpg",
-    backdrop: "/images/hero_movie_banner.jpg",
-    director: "Raihan Rafi",
-    cast: "Shakib Khan, Mimi Chakraborty, Chanchal Chowdhury, Nabila",
-    storyline: "The ruthless rise and bloodstained criminal career of Galib, a reckless small-time criminal who ascends to become the most dreaded mafia don Toofan across the underworld of Bangladesh in the 1990s.",
-    isFeatured: false,
-    isTrending: true,
-    trailerUrl: "https://www.youtube.com/embed/n43jXpI2W44",
-    streamServers: [
-      { name: "Server 1 (Fast HD)", url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" }
+    "id": "moviebaaz-29396",
+    "title": "Bagh Bandi Khela (2018) Bengali Hotstar WEB-DL – 480P | 720P | 1080P – Download & Watch Online",
+    "year": 2018,
+    "category": "Kolkata Bangla",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
     ],
-    downloadLinks: [
+    "rating": 7.1,
+    "duration": "2h 18m",
+    "quality": "1080p | 720p | 480p WEB-DL",
+    "audio": "Hindi (Original Audio)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "2.4 GB / 1.2 GB / 500 MB",
+    "poster": "https://i.postimg.cc/BsPCQzmf/Picsart-25-11-19-01-41-23-830.jpg",
+    "backdrop": "https://i.postimg.cc/BsPCQzmf/Picsart-25-11-19-01-41-23-830.jpg",
+    "director": "MovieBaaz Releases",
+    "cast": "Starring Cast & Crew",
+    "storyline": "Bagh Bandi Khela (2018) Bengali Hotstar WEB-DL – 480P | 720P | 1080P – Download & Watch Online - Official high speed download link and online stream. Fast Google Drive, HubCloud, and Mega mirrors.",
+    "isFeatured": true,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/g3JUbgFBWu8",
+    "streamServers": [
       {
-        quality: "480p SD",
-        size: "450 MB",
-        resolution: "854x480",
-        servers: [
-          { name: "Fast Google Drive", url: "https://moviebaaz.baby/download/toofan-480p-gdrive", speed: "Fast" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/toofan-480p-hubcloud", speed: "High Speed" }
+        "name": "Server 1 (Fast HD)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      },
+      {
+        "name": "Server 2 (Multi-Quality)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "450 MB",
+        "resolution": "854x480 (x264)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/29396-480",
+            "speed": "High Speed"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/29396-hub-480",
+            "speed": "Instant"
+          }
         ]
       },
       {
-        quality: "720p HD",
-        size: "1.1 GB",
-        resolution: "1280x720",
-        servers: [
-          { name: "Fast Google Drive", url: "https://moviebaaz.baby/download/toofan-720p-gdrive", speed: "Fast" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/toofan-720p-hubcloud", speed: "High Speed" }
+        "quality": "720p HD",
+        "size": "1.2 GB",
+        "resolution": "1280x720 (HEVC)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/29396-720",
+            "speed": "100MB/s"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/29396-hub-720",
+            "speed": "Instant"
+          }
         ]
       },
       {
-        quality: "1080p FHD",
-        size: "2.1 GB",
-        resolution: "1920x1080",
-        servers: [
-          { name: "Fast Google Drive (VIP)", url: "https://moviebaaz.baby/download/toofan-1080p-gdrive", speed: "Lightning 100MB/s" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/toofan-1080p-hubcloud", speed: "High Speed" }
+        "quality": "1080p FHD",
+        "size": "2.4 GB",
+        "resolution": "1920x1080 (HQ)",
+        "servers": [
+          {
+            "name": "Fast Google Drive (VIP)",
+            "url": "https://moviebaaz.baby/download/29396-1080",
+            "speed": "VIP Mirror"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/29396-hub-1080",
+            "speed": "Instant"
+          }
         ]
       }
     ],
-    screenshots: [
-      "/images/poster_detective_thriller.jpg"
+    "screenshots": [
+      "https://i.postimg.cc/BsPCQzmf/Picsart-25-11-19-01-41-23-830.jpg"
     ],
-    createdAt: "2025-01-02T14:00:00.000Z"
+    "createdAt": "2026-09-28T14:51:23.978Z"
   },
   {
-    id: "deadpool-and-wolverine-2024",
-    title: "Deadpool & Wolverine",
-    year: 2024,
-    category: "Hollywood Dual Audio",
-    genres: ["Action", "Adventure", "Comedy", "Sci-Fi"],
-    rating: 7.7,
-    duration: "2h 08m",
-    quality: "1080p WEB-DL",
-    audio: "Hindi (Clean DDP 5.1) + English (Dual Audio)",
-    subtitles: "English [ESub] + Hindi",
-    fileSize: "2.5 GB / 1.3 GB / 600 MB",
-    poster: "/images/poster_action_sci.jpg",
-    backdrop: "/images/hero_movie_banner.jpg",
-    director: "Shawn Levy",
-    cast: "Ryan Reynolds, Hugh Jackman, Emma Corrin, Matthew Macfadyen",
-    storyline: "Wolverine is recovering from his injuries when he crosses paths with the loudmouth Deadpool. They team up to defeat a common enemy threatening the stability of their respective timelines.",
-    isFeatured: false,
-    isTrending: true,
-    trailerUrl: "https://www.youtube.com/embed/73_1biulkYk",
-    streamServers: [
-      { name: "Server 1 (Fast HD)", url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" }
+    "id": "moviebaaz-13780",
+    "title": "Lakadbaggha 2023 Hindi Movie Download | HQ S-Print Rip 1080p 720p 480p",
+    "year": 2023,
+    "category": "Movies",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
     ],
-    downloadLinks: [
+    "rating": 7.2,
+    "duration": "2h 18m",
+    "quality": "1080p | 720p | 480p WEB-DL",
+    "audio": "Hindi (Original Audio)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "2.4 GB / 1.2 GB / 500 MB",
+    "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMRIrh_8tAKorMoPIBMa45sngT-uEDtu0MAA&#038;usqp=CAU",
+    "backdrop": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMRIrh_8tAKorMoPIBMa45sngT-uEDtu0MAA&#038;usqp=CAU",
+    "director": "MovieBaaz Releases",
+    "cast": "Starring Cast & Crew",
+    "storyline": "Lakadbaggha 2023 Hindi Movie Download | HQ S-Print Rip 1080p 720p 480p - Official high speed download link and online stream. Fast Google Drive, HubCloud, and Mega mirrors.",
+    "isFeatured": true,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/g3JUbgFBWu8",
+    "streamServers": [
       {
-        quality: "480p SD",
-        size: "600 MB",
-        resolution: "854x480",
-        servers: [
-          { name: "Fast Google Drive", url: "https://moviebaaz.baby/download/deadpool-480p-gdrive", speed: "Fast" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/deadpool-480p-hubcloud", speed: "High Speed" }
+        "name": "Server 1 (Fast HD)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      },
+      {
+        "name": "Server 2 (Multi-Quality)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "450 MB",
+        "resolution": "854x480 (x264)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/13780-480",
+            "speed": "High Speed"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/13780-hub-480",
+            "speed": "Instant"
+          }
         ]
       },
       {
-        quality: "720p HD Dual Audio",
-        size: "1.3 GB",
-        resolution: "1280x720",
-        servers: [
-          { name: "Fast Google Drive", url: "https://moviebaaz.baby/download/deadpool-720p-gdrive", speed: "Fast" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/deadpool-720p-hubcloud", speed: "High Speed" }
+        "quality": "720p HD",
+        "size": "1.2 GB",
+        "resolution": "1280x720 (HEVC)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/13780-720",
+            "speed": "100MB/s"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/13780-hub-720",
+            "speed": "Instant"
+          }
         ]
       },
       {
-        quality: "1080p 10-Bit Dual Audio",
-        size: "2.5 GB",
-        resolution: "1920x1080",
-        servers: [
-          { name: "Fast Google Drive (VIP)", url: "https://moviebaaz.baby/download/deadpool-1080p-gdrive", speed: "Lightning 100MB/s" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/deadpool-1080p-hubcloud", speed: "High Speed" }
+        "quality": "1080p FHD",
+        "size": "2.4 GB",
+        "resolution": "1920x1080 (HQ)",
+        "servers": [
+          {
+            "name": "Fast Google Drive (VIP)",
+            "url": "https://moviebaaz.baby/download/13780-1080",
+            "speed": "VIP Mirror"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/13780-hub-1080",
+            "speed": "Instant"
+          }
         ]
       }
     ],
-    screenshots: [
-      "/images/poster_action_sci.jpg"
+    "screenshots": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMRIrh_8tAKorMoPIBMa45sngT-uEDtu0MAA&#038;usqp=CAU"
     ],
-    createdAt: "2024-12-25T11:00:00.000Z"
+    "createdAt": "2026-09-28T13:51:23.978Z"
   },
   {
-    id: "mirzapur-season-3-2024",
-    title: "Mirzapur (Season 3) Complete",
-    year: 2024,
-    category: "Web Series",
-    genres: ["Action", "Crime", "Drama", "Thriller"],
-    rating: 8.5,
-    duration: "10 Episodes",
-    quality: "720p / 1080p WEB-DL",
-    audio: "Hindi (Original Audio)",
-    subtitles: "English [ESubs]",
-    fileSize: "3.5 GB (Pack) / 350MB (Per Ep)",
-    poster: "/images/poster_historical_epic.jpg",
-    backdrop: "/images/hero_movie_banner.jpg",
-    director: "Gurmmeet Singh, Anand Iyer",
-    cast: "Pankaj Tripathi, Ali Fazal, Shweta Tripathi, Rasika Dugal",
-    storyline: "With Akhandanand Tripathi recovering in secrecy, Guddu Pandit and Golu seize control of the Purvanchal throne. Political betrayals, bloodbaths and shifting alliances threaten to unravel the kingdom of Mirzapur.",
-    isFeatured: false,
-    isTrending: true,
-    trailerUrl: "https://www.youtube.com/embed/5a4G3aD1hEU",
-    streamServers: [
-      { name: "Episode 1 to 10 Player", url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" }
+    "id": "moviebaaz-12347",
+    "title": "Fall (2022) S01 Complete Dual Audio [Bangla+Hindi] DNSP WEB-DL x264 480P 720P 1080P",
+    "year": 2022,
+    "category": "Kolkata Bangla",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
     ],
-    downloadLinks: [
+    "rating": 7.3,
+    "duration": "All Episodes",
+    "quality": "1080p | 720p | 480p WEB-DL",
+    "audio": "Hindi + English (Dual Audio)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "2.4 GB / 1.2 GB / 500 MB",
+    "poster": "https://i.postimg.cc/Vv5FhL95/16705624846392c2b439e67.webp",
+    "backdrop": "https://i.postimg.cc/Vv5FhL95/16705624846392c2b439e67.webp",
+    "director": "MovieBaaz Releases",
+    "cast": "Starring Cast & Crew",
+    "storyline": "Fall (2022) S01 Complete Dual Audio [Bangla+Hindi] DNSP WEB-DL x264 480P 720P 1080P - Official high speed download link and online stream. Fast Google Drive, HubCloud, and Mega mirrors.",
+    "isFeatured": true,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/g3JUbgFBWu8",
+    "streamServers": [
       {
-        quality: "720p Complete Zip Pack",
-        size: "3.5 GB",
-        resolution: "1280x720",
-        servers: [
-          { name: "Fast Google Drive Zip", url: "https://moviebaaz.baby/download/mirzapur-s3-720p-zip", speed: "Lightning 100MB/s" },
-          { name: "HubCloud Batch", url: "https://moviebaaz.baby/download/mirzapur-s3-720p-batch", speed: "Fast" }
+        "name": "Server 1 (Fast HD)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      },
+      {
+        "name": "Server 2 (Multi-Quality)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "450 MB",
+        "resolution": "854x480 (x264)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/12347-480",
+            "speed": "High Speed"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/12347-hub-480",
+            "speed": "Instant"
+          }
         ]
       },
       {
-        quality: "1080p FHD Batch Pack",
-        size: "7.8 GB",
-        resolution: "1920x1080",
-        servers: [
-          { name: "Fast Google Drive VIP", url: "https://moviebaaz.baby/download/mirzapur-s3-1080p-gdrive", speed: "Lightning 100MB/s" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/mirzapur-s3-1080p-hubcloud", speed: "High Speed" }
+        "quality": "720p HD",
+        "size": "1.2 GB",
+        "resolution": "1280x720 (HEVC)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/12347-720",
+            "speed": "100MB/s"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/12347-hub-720",
+            "speed": "Instant"
+          }
+        ]
+      },
+      {
+        "quality": "1080p FHD",
+        "size": "2.4 GB",
+        "resolution": "1920x1080 (HQ)",
+        "servers": [
+          {
+            "name": "Fast Google Drive (VIP)",
+            "url": "https://moviebaaz.baby/download/12347-1080",
+            "speed": "VIP Mirror"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/12347-hub-1080",
+            "speed": "Instant"
+          }
         ]
       }
     ],
-    screenshots: [
-      "/images/poster_historical_epic.jpg"
+    "screenshots": [
+      "https://i.postimg.cc/Vv5FhL95/16705624846392c2b439e67.webp"
     ],
-    createdAt: "2024-12-20T16:00:00.000Z"
+    "createdAt": "2026-09-28T12:51:23.978Z"
   },
   {
-    id: "squid-game-season-2-2024",
-    title: "Squid Game (Season 2) Dual Audio",
-    year: 2024,
-    category: "Web Series",
-    genres: ["Action", "Drama", "Mystery", "Thriller"],
-    rating: 8.2,
-    duration: "6 Episodes",
-    quality: "1080p WEB-DL",
-    audio: "Hindi + Korean (Dual Audio)",
-    subtitles: "English [ESub] + Hindi",
-    fileSize: "3.2 GB (Pack) / 500MB (Per Ep)",
-    poster: "/images/poster_action_sci.jpg",
-    backdrop: "/images/hero_movie_banner.jpg",
-    director: "Hwang Dong-hyuk",
-    cast: "Lee Jung-jae, Lee Byung-hun, Wi Ha-joon, Im Si-wan",
-    storyline: "Three years after winning the deadly Squid Game, Player 456 Seong Gi-hun abandons his plans to go to the US and returns with a resolute purpose to dismantle the brutal game organization from within.",
-    isFeatured: false,
-    isTrending: true,
-    trailerUrl: "https://www.youtube.com/embed/Edw9b5a-jWc",
-    streamServers: [
-      { name: "Server 1 (All Episodes)", url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" }
+    "id": "moviebaaz-29513",
+    "title": "Sisu: Road to Revenge (2025) Dual Audio [Hindi & English] Amazon WEB-DL – 480P | 720P | 1080P – Download & Watch Online",
+    "year": 2025,
+    "category": "Dual & Multi Audio",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
     ],
-    downloadLinks: [
+    "rating": 7.4,
+    "duration": "2h 18m",
+    "quality": "1080p | 720p | 480p WEB-DL",
+    "audio": "Hindi + English (Dual Audio)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "2.4 GB / 1.2 GB / 500 MB",
+    "poster": "https://i.postimg.cc/fbLfzwwd/SISU-Road-to-Revive-webp-amp-1-gl-1-k8epqs-ga-YW1w-LWgw-Zlpo-UDFPb-DV3MVZhemtwe-TVvb-Wc-ga-2EW6DB101.webp",
+    "backdrop": "https://i.postimg.cc/fbLfzwwd/SISU-Road-to-Revive-webp-amp-1-gl-1-k8epqs-ga-YW1w-LWgw-Zlpo-UDFPb-DV3MVZhemtwe-TVvb-Wc-ga-2EW6DB101.webp",
+    "director": "MovieBaaz Releases",
+    "cast": "Starring Cast & Crew",
+    "storyline": "Sisu: Road to Revenge (2025) Dual Audio [Hindi & English] Amazon WEB-DL – 480P | 720P | 1080P – Download & Watch Online - Official high speed download link and online stream. Fast Google Drive, HubCloud, and Mega mirrors.",
+    "isFeatured": false,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/g3JUbgFBWu8",
+    "streamServers": [
       {
-        quality: "720p Dual Audio Pack",
-        size: "2.4 GB",
-        resolution: "1280x720",
-        servers: [
-          { name: "Fast Google Drive", url: "https://moviebaaz.baby/download/squidgame-s2-720p", speed: "High Speed" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/squidgame-s2-hubcloud", speed: "Fast" }
+        "name": "Server 1 (Fast HD)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      },
+      {
+        "name": "Server 2 (Multi-Quality)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "450 MB",
+        "resolution": "854x480 (x264)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/29513-480",
+            "speed": "High Speed"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/29513-hub-480",
+            "speed": "Instant"
+          }
         ]
       },
       {
-        quality: "1080p FHD Dual Audio",
-        size: "4.8 GB",
-        resolution: "1920x1080",
-        servers: [
-          { name: "Fast Google Drive VIP", url: "https://moviebaaz.baby/download/squidgame-s2-1080p", speed: "Lightning 100MB/s" }
+        "quality": "720p HD",
+        "size": "1.2 GB",
+        "resolution": "1280x720 (HEVC)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/29513-720",
+            "speed": "100MB/s"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/29513-hub-720",
+            "speed": "Instant"
+          }
+        ]
+      },
+      {
+        "quality": "1080p FHD",
+        "size": "2.4 GB",
+        "resolution": "1920x1080 (HQ)",
+        "servers": [
+          {
+            "name": "Fast Google Drive (VIP)",
+            "url": "https://moviebaaz.baby/download/29513-1080",
+            "speed": "VIP Mirror"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/29513-hub-1080",
+            "speed": "Instant"
+          }
         ]
       }
     ],
-    screenshots: [
-      "/images/poster_action_sci.jpg"
+    "screenshots": [
+      "https://i.postimg.cc/fbLfzwwd/SISU-Road-to-Revive-webp-amp-1-gl-1-k8epqs-ga-YW1w-LWgw-Zlpo-UDFPb-DV3MVZhemtwe-TVvb-Wc-ga-2EW6DB101.webp"
     ],
-    createdAt: "2024-12-18T09:00:00.000Z"
+    "createdAt": "2026-09-28T11:51:23.978Z"
   },
   {
-    id: "maharaja-2024-hindi-dubbed",
-    title: "Maharaja",
-    year: 2024,
-    category: "South Hindi Dubbed",
-    genres: ["Action", "Crime", "Drama", "Mystery"],
-    rating: 8.5,
-    duration: "2h 20m",
-    quality: "1080p WEB-DL",
-    audio: "Hindi (Clean Audio) + Tamil (Dual Audio)",
-    subtitles: "English [ESubs]",
-    fileSize: "2.2 GB / 1.1 GB / 500 MB",
-    poster: "/images/poster_detective_thriller.jpg",
-    backdrop: "/images/hero_movie_banner.jpg",
-    director: "Nithilan Saminathan",
-    cast: "Vijay Sethupathi, Anurag Kashyap, Mamta Mohandas, Natarajan",
-    storyline: "A quiet barber visits a police station reporting the theft of 'Lakshmi', an ordinary iron dustbin. As baffled police unravel the case, a horrifying web of deception, vengeance, and ruthless retribution surfaces.",
-    isFeatured: false,
-    isTrending: true,
-    trailerUrl: "https://www.youtube.com/embed/6iU6N9fO9Zg",
-    streamServers: [
-      { name: "Server 1 (Fast HD)", url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" }
+    "id": "moviebaaz-25767",
+    "title": "Ayyana Mane (2025) Season 01 All Episode Dual Audio [Hindi-Kannada] Zee5 WEB-DL – 480P | 720P | 1080P – Download & Watch Online",
+    "year": 2025,
+    "category": "Dual & Multi Audio",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
     ],
-    downloadLinks: [
+    "rating": 7.5,
+    "duration": "All Episodes",
+    "quality": "1080p | 720p | 480p WEB-DL",
+    "audio": "Hindi + English (Dual Audio)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "2.4 GB / 1.2 GB / 500 MB",
+    "poster": "https://i.postimg.cc/vZGhgBZw/Ayyana-Mane-S1.jpg",
+    "backdrop": "https://i.postimg.cc/vZGhgBZw/Ayyana-Mane-S1.jpg",
+    "director": "MovieBaaz Releases",
+    "cast": "Starring Cast & Crew",
+    "storyline": "Ayyana Mane (2025) Season 01 All Episode Dual Audio [Hindi-Kannada] Zee5 WEB-DL – 480P | 720P | 1080P – Download & Watch Online - Official high speed download link and online stream. Fast Google Drive, HubCloud, and Mega mirrors.",
+    "isFeatured": false,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/g3JUbgFBWu8",
+    "streamServers": [
       {
-        quality: "480p SD",
-        size: "500 MB",
-        resolution: "854x480",
-        servers: [
-          { name: "Fast Google Drive", url: "https://moviebaaz.baby/download/maharaja-480p-gdrive", speed: "Fast" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/maharaja-480p-hubcloud", speed: "High Speed" }
+        "name": "Server 1 (Fast HD)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      },
+      {
+        "name": "Server 2 (Multi-Quality)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "450 MB",
+        "resolution": "854x480 (x264)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/25767-480",
+            "speed": "High Speed"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/25767-hub-480",
+            "speed": "Instant"
+          }
         ]
       },
       {
-        quality: "720p HD",
-        size: "1.1 GB",
-        resolution: "1280x720",
-        servers: [
-          { name: "Fast Google Drive", url: "https://moviebaaz.baby/download/maharaja-720p-gdrive", speed: "Fast" },
-          { name: "HubCloud Direct", url: "https://moviebaaz.baby/download/maharaja-720p-hubcloud", speed: "High Speed" }
+        "quality": "720p HD",
+        "size": "1.2 GB",
+        "resolution": "1280x720 (HEVC)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/25767-720",
+            "speed": "100MB/s"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/25767-hub-720",
+            "speed": "Instant"
+          }
         ]
       },
       {
-        quality: "1080p FHD",
-        size: "2.2 GB",
-        resolution: "1920x1080",
-        servers: [
-          { name: "Fast Google Drive (VIP)", url: "https://moviebaaz.baby/download/maharaja-1080p-gdrive", speed: "Lightning 100MB/s" }
+        "quality": "1080p FHD",
+        "size": "2.4 GB",
+        "resolution": "1920x1080 (HQ)",
+        "servers": [
+          {
+            "name": "Fast Google Drive (VIP)",
+            "url": "https://moviebaaz.baby/download/25767-1080",
+            "speed": "VIP Mirror"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/25767-hub-1080",
+            "speed": "Instant"
+          }
         ]
       }
     ],
-    screenshots: [
-      "/images/poster_detective_thriller.jpg"
+    "screenshots": [
+      "https://i.postimg.cc/vZGhgBZw/Ayyana-Mane-S1.jpg"
     ],
-    createdAt: "2024-12-15T08:00:00.000Z"
+    "createdAt": "2026-09-28T10:51:23.978Z"
+  },
+  {
+    "id": "moviebaaz-7758",
+    "title": "Radhe (2021) Bengali [HQ Dubbed] WEB-DL – 480P | 720P | 1080P – x264 – 360MB | 950MB | 1.7GB – Download & Watch Online",
+    "year": 2021,
+    "category": "Kolkata Bangla",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 7.6,
+    "duration": "2h 18m",
+    "quality": "1080p | 720p | 480p WEB-DL",
+    "audio": "Hindi (Original Audio)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "2.4 GB / 1.2 GB / 500 MB",
+    "poster": "https://i.postimg.cc/9QVcWW7j/images-35.jpg",
+    "backdrop": "https://i.postimg.cc/9QVcWW7j/images-35.jpg",
+    "director": "MovieBaaz Releases",
+    "cast": "Starring Cast & Crew",
+    "storyline": "Radhe (2021) Bengali [HQ Dubbed] WEB-DL – 480P | 720P | 1080P – x264 – 360MB | 950MB | 1.7GB – Download & Watch Online - Official high speed download link and online stream. Fast Google Drive, HubCloud, and Mega mirrors.",
+    "isFeatured": false,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/g3JUbgFBWu8",
+    "streamServers": [
+      {
+        "name": "Server 1 (Fast HD)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      },
+      {
+        "name": "Server 2 (Multi-Quality)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "450 MB",
+        "resolution": "854x480 (x264)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/7758-480",
+            "speed": "High Speed"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/7758-hub-480",
+            "speed": "Instant"
+          }
+        ]
+      },
+      {
+        "quality": "720p HD",
+        "size": "1.2 GB",
+        "resolution": "1280x720 (HEVC)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/7758-720",
+            "speed": "100MB/s"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/7758-hub-720",
+            "speed": "Instant"
+          }
+        ]
+      },
+      {
+        "quality": "1080p FHD",
+        "size": "2.4 GB",
+        "resolution": "1920x1080 (HQ)",
+        "servers": [
+          {
+            "name": "Fast Google Drive (VIP)",
+            "url": "https://moviebaaz.baby/download/7758-1080",
+            "speed": "VIP Mirror"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/7758-hub-1080",
+            "speed": "Instant"
+          }
+        ]
+      }
+    ],
+    "screenshots": [
+      "https://i.postimg.cc/9QVcWW7j/images-35.jpg"
+    ],
+    "createdAt": "2026-09-28T09:51:23.978Z"
+  },
+  {
+    "id": "moviebaaz-14318",
+    "title": "The Tenant 2023 Hindi Movie HQ S-Print Rip 1080p 720p 480p",
+    "year": 2021,
+    "category": "Movies",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 7.7,
+    "duration": "2h 18m",
+    "quality": "1080p | 720p | 480p WEB-DL",
+    "audio": "Hindi (Original Audio)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "2.4 GB / 1.2 GB / 500 MB",
+    "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE-6c1kxDLdZcNDWEgecoaymmmYaMG4Aq73Q&#038;usqp=CAU",
+    "backdrop": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE-6c1kxDLdZcNDWEgecoaymmmYaMG4Aq73Q&#038;usqp=CAU",
+    "director": "MovieBaaz Releases",
+    "cast": "Starring Cast & Crew",
+    "storyline": "The Tenant 2023 Hindi Movie HQ S-Print Rip 1080p 720p 480p - Official high speed download link and online stream. Fast Google Drive, HubCloud, and Mega mirrors.",
+    "isFeatured": false,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/g3JUbgFBWu8",
+    "streamServers": [
+      {
+        "name": "Server 1 (Fast HD)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      },
+      {
+        "name": "Server 2 (Multi-Quality)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "450 MB",
+        "resolution": "854x480 (x264)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/14318-480",
+            "speed": "High Speed"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/14318-hub-480",
+            "speed": "Instant"
+          }
+        ]
+      },
+      {
+        "quality": "720p HD",
+        "size": "1.2 GB",
+        "resolution": "1280x720 (HEVC)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/14318-720",
+            "speed": "100MB/s"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/14318-hub-720",
+            "speed": "Instant"
+          }
+        ]
+      },
+      {
+        "quality": "1080p FHD",
+        "size": "2.4 GB",
+        "resolution": "1920x1080 (HQ)",
+        "servers": [
+          {
+            "name": "Fast Google Drive (VIP)",
+            "url": "https://moviebaaz.baby/download/14318-1080",
+            "speed": "VIP Mirror"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/14318-hub-1080",
+            "speed": "Instant"
+          }
+        ]
+      }
+    ],
+    "screenshots": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE-6c1kxDLdZcNDWEgecoaymmmYaMG4Aq73Q&#038;usqp=CAU"
+    ],
+    "createdAt": "2026-09-28T08:51:23.978Z"
+  },
+  {
+    "id": "moviebaaz-24489",
+    "title": "Human (2022) Season 01 All Episode Bengali Hotstar WEB-DL – 480P | 720P | 1080P – Download & Watch Online",
+    "year": 2022,
+    "category": "Kolkata Bangla",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 7.8,
+    "duration": "All Episodes",
+    "quality": "1080p | 720p | 480p WEB-DL",
+    "audio": "Hindi (Original Audio)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "2.4 GB / 1.2 GB / 500 MB",
+    "poster": "https://i.postimg.cc/gjqhN7Cx/image.jpg",
+    "backdrop": "https://i.postimg.cc/gjqhN7Cx/image.jpg",
+    "director": "MovieBaaz Releases",
+    "cast": "Starring Cast & Crew",
+    "storyline": "Human (2022) Season 01 All Episode Bengali Hotstar WEB-DL – 480P | 720P | 1080P – Download & Watch Online - Official high speed download link and online stream. Fast Google Drive, HubCloud, and Mega mirrors.",
+    "isFeatured": false,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/g3JUbgFBWu8",
+    "streamServers": [
+      {
+        "name": "Server 1 (Fast HD)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      },
+      {
+        "name": "Server 2 (Multi-Quality)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "450 MB",
+        "resolution": "854x480 (x264)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/24489-480",
+            "speed": "High Speed"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/24489-hub-480",
+            "speed": "Instant"
+          }
+        ]
+      },
+      {
+        "quality": "720p HD",
+        "size": "1.2 GB",
+        "resolution": "1280x720 (HEVC)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/24489-720",
+            "speed": "100MB/s"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/24489-hub-720",
+            "speed": "Instant"
+          }
+        ]
+      },
+      {
+        "quality": "1080p FHD",
+        "size": "2.4 GB",
+        "resolution": "1920x1080 (HQ)",
+        "servers": [
+          {
+            "name": "Fast Google Drive (VIP)",
+            "url": "https://moviebaaz.baby/download/24489-1080",
+            "speed": "VIP Mirror"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/24489-hub-1080",
+            "speed": "Instant"
+          }
+        ]
+      }
+    ],
+    "screenshots": [
+      "https://i.postimg.cc/gjqhN7Cx/image.jpg"
+    ],
+    "createdAt": "2026-09-28T07:51:23.978Z"
+  },
+  {
+    "id": "moviebaaz-11371",
+    "title": "Hostel Days (2022) S01 All Episode Bengali Hoichoi WEB-DL – 480P | 720P | 1080P – x264 – 550MB | 1.2GB | 2.4GB – Download & Watch Online",
+    "year": 2022,
+    "category": "Kolkata Bangla",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 7.9,
+    "duration": "All Episodes",
+    "quality": "1080p | 720p | 480p WEB-DL",
+    "audio": "Hindi (Original Audio)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "2.4 GB / 1.2 GB / 500 MB",
+    "poster": "https://i.postimg.cc/MHYXdZtn/Screenshot-20221125-154136.jpg",
+    "backdrop": "https://i.postimg.cc/MHYXdZtn/Screenshot-20221125-154136.jpg",
+    "director": "MovieBaaz Releases",
+    "cast": "Starring Cast & Crew",
+    "storyline": "Hostel Days (2022) S01 All Episode Bengali Hoichoi WEB-DL – 480P | 720P | 1080P – x264 – 550MB | 1.2GB | 2.4GB – Download & Watch Online - Official high speed download link and online stream. Fast Google Drive, HubCloud, and Mega mirrors.",
+    "isFeatured": false,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/g3JUbgFBWu8",
+    "streamServers": [
+      {
+        "name": "Server 1 (Fast HD)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      },
+      {
+        "name": "Server 2 (Multi-Quality)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "450 MB",
+        "resolution": "854x480 (x264)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/11371-480",
+            "speed": "High Speed"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/11371-hub-480",
+            "speed": "Instant"
+          }
+        ]
+      },
+      {
+        "quality": "720p HD",
+        "size": "1.2 GB",
+        "resolution": "1280x720 (HEVC)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/11371-720",
+            "speed": "100MB/s"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/11371-hub-720",
+            "speed": "Instant"
+          }
+        ]
+      },
+      {
+        "quality": "1080p FHD",
+        "size": "2.4 GB",
+        "resolution": "1920x1080 (HQ)",
+        "servers": [
+          {
+            "name": "Fast Google Drive (VIP)",
+            "url": "https://moviebaaz.baby/download/11371-1080",
+            "speed": "VIP Mirror"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/11371-hub-1080",
+            "speed": "Instant"
+          }
+        ]
+      }
+    ],
+    "screenshots": [
+      "https://i.postimg.cc/MHYXdZtn/Screenshot-20221125-154136.jpg"
+    ],
+    "createdAt": "2026-09-28T06:51:23.978Z"
+  },
+  {
+    "id": "moviebaaz-9847",
+    "title": "Kumari 21F (2018) Uncut Dual Audio [Hindi+Kannada] HD-Rip x264 480P 720P 1080P",
+    "year": 2018,
+    "category": "Dual & Multi Audio",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 8,
+    "duration": "2h 18m",
+    "quality": "1080p | 720p | 480p WEB-DL",
+    "audio": "Hindi + English (Dual Audio)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "2.4 GB / 1.2 GB / 500 MB",
+    "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrGpmrpKGMNMcKhGDyAd4yYe0a1xZD64Imhg&#038;usqp=CAU",
+    "backdrop": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrGpmrpKGMNMcKhGDyAd4yYe0a1xZD64Imhg&#038;usqp=CAU",
+    "director": "MovieBaaz Releases",
+    "cast": "Starring Cast & Crew",
+    "storyline": "Kumari 21F (2018) Uncut Dual Audio [Hindi+Kannada] HD-Rip x264 480P 720P 1080P - Official high speed download link and online stream. Fast Google Drive, HubCloud, and Mega mirrors.",
+    "isFeatured": false,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/g3JUbgFBWu8",
+    "streamServers": [
+      {
+        "name": "Server 1 (Fast HD)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      },
+      {
+        "name": "Server 2 (Multi-Quality)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "450 MB",
+        "resolution": "854x480 (x264)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/9847-480",
+            "speed": "High Speed"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/9847-hub-480",
+            "speed": "Instant"
+          }
+        ]
+      },
+      {
+        "quality": "720p HD",
+        "size": "1.2 GB",
+        "resolution": "1280x720 (HEVC)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/9847-720",
+            "speed": "100MB/s"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/9847-hub-720",
+            "speed": "Instant"
+          }
+        ]
+      },
+      {
+        "quality": "1080p FHD",
+        "size": "2.4 GB",
+        "resolution": "1920x1080 (HQ)",
+        "servers": [
+          {
+            "name": "Fast Google Drive (VIP)",
+            "url": "https://moviebaaz.baby/download/9847-1080",
+            "speed": "VIP Mirror"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/9847-hub-1080",
+            "speed": "Instant"
+          }
+        ]
+      }
+    ],
+    "screenshots": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrGpmrpKGMNMcKhGDyAd4yYe0a1xZD64Imhg&#038;usqp=CAU"
+    ],
+    "createdAt": "2026-09-28T05:51:23.978Z"
+  },
+  {
+    "id": "moviebaaz-4009",
+    "title": "Guptodhoner Sondhane (2018) Bengali WEB-DL – 480P | 720P | 1080P – x264 – 500MB | 1.3GB | 3.4GB – Download & Watch Online",
+    "year": 2018,
+    "category": "Kolkata Bangla",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 8.1,
+    "duration": "2h 18m",
+    "quality": "1080p | 720p | 480p WEB-DL",
+    "audio": "Hindi (Original Audio)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "2.4 GB / 1.2 GB / 500 MB",
+    "poster": "https://image.tmdb.org/t/p/w780/gAFeWgE0nPj6T5r6RgBqK1Bdr0F.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w780/gAFeWgE0nPj6T5r6RgBqK1Bdr0F.jpg",
+    "director": "MovieBaaz Releases",
+    "cast": "Starring Cast & Crew",
+    "storyline": "Guptodhoner Sondhane (2018) Bengali WEB-DL – 480P | 720P | 1080P – x264 – 500MB | 1.3GB | 3.4GB – Download & Watch Online - Official high speed download link and online stream. Fast Google Drive, HubCloud, and Mega mirrors.",
+    "isFeatured": false,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/g3JUbgFBWu8",
+    "streamServers": [
+      {
+        "name": "Server 1 (Fast HD)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      },
+      {
+        "name": "Server 2 (Multi-Quality)",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "450 MB",
+        "resolution": "854x480 (x264)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/4009-480",
+            "speed": "High Speed"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/4009-hub-480",
+            "speed": "Instant"
+          }
+        ]
+      },
+      {
+        "quality": "720p HD",
+        "size": "1.2 GB",
+        "resolution": "1280x720 (HEVC)",
+        "servers": [
+          {
+            "name": "Fast Google Drive",
+            "url": "https://moviebaaz.baby/download/4009-720",
+            "speed": "100MB/s"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/4009-hub-720",
+            "speed": "Instant"
+          }
+        ]
+      },
+      {
+        "quality": "1080p FHD",
+        "size": "2.4 GB",
+        "resolution": "1920x1080 (HQ)",
+        "servers": [
+          {
+            "name": "Fast Google Drive (VIP)",
+            "url": "https://moviebaaz.baby/download/4009-1080",
+            "speed": "VIP Mirror"
+          },
+          {
+            "name": "HubCloud Direct",
+            "url": "https://moviebaaz.baby/download/4009-hub-1080",
+            "speed": "Instant"
+          }
+        ]
+      }
+    ],
+    "screenshots": [
+      "https://image.tmdb.org/t/p/w780/gAFeWgE0nPj6T5r6RgBqK1Bdr0F.jpg"
+    ],
+    "createdAt": "2026-09-28T04:51:23.978Z"
   }
 ];
 
@@ -512,17 +1304,6 @@ export const INITIAL_ADS: AdsConfig = {
       targetUrl: "https://moviebaaz.baby",
       customHtml: "<div style=\"display: flex; align-items: center; justify-content: center; gap: 12px; padding: 8px 16px; background: #0f172a; border-top: 1px solid #334155; color: #e2e8f0; font-size: 12px;\"><span>🔥 Latest South Indian Dubbed Movies in 1080p 60FPS!</span><a href=\"#\" style=\"background: #f59e0b; color: #000; font-weight: bold; padding: 4px 12px; border-radius: 4px; text-decoration: none;\">Explore</a></div>",
       label: "Bottom Sticky"
-    },
-    popunder_script: {
-      id: "popunder_script",
-      name: "Popunder / Direct Link Ad Code Snippet",
-      position: "Injected into public pages on first user click (Adsterra / PropellerAds format)",
-      enabled: false,
-      type: "script",
-      bannerUrl: "",
-      targetUrl: "https://example.com/direct-offer",
-      customHtml: "<!-- Adsterra / PropellerAds popunder snippet -->\n<script type=\"text/javascript\">\n  // Put your Adsterra / PropellerAds JS script code here\n  console.log('Ad network popunder script loaded');\n</script>",
-      label: "Ad Network Popunder"
     }
   },
   stats: {

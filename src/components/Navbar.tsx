@@ -32,11 +32,13 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   const categories = [
     'All',
-    'South Hindi Dubbed',
-    'Bollywood',
-    'Hollywood Dual Audio',
-    'Bengali Movies',
-    'Web Series'
+    'Movies',
+    'Drama',
+    'Kolkata Bangla',
+    'Hindi Dubbed',
+    'Dual & Multi Audio',
+    'Bangladeshi',
+    'Hollywood Movies'
   ];
 
   // Filter movies for autocomplete

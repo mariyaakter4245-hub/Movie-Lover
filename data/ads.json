@@ -55,17 +55,6 @@
       "targetUrl": "https://moviebaaz.baby",
       "customHtml": "<div style=\"display: flex; align-items: center; justify-content: center; gap: 12px; padding: 8px 16px; background: #0f172a; border-top: 1px solid #334155; color: #e2e8f0; font-size: 12px;\"><span>🔥 Latest South Indian Dubbed Movies in 1080p 60FPS!</span><a href=\"#\" style=\"background: #f59e0b; color: #000; font-weight: bold; padding: 4px 12px; border-radius: 4px; text-decoration: none;\">Explore</a></div>",
       "label": "Bottom Sticky"
-    },
-    "popunder_script": {
-      "id": "popunder_script",
-      "name": "Popunder / Direct Link Ad Code Snippet",
-      "position": "Injected into public pages on first user click (Adsterra / PropellerAds format)",
-      "enabled": false,
-      "type": "script",
-      "bannerUrl": "",
-      "targetUrl": "https://example.com/direct-offer",
-      "customHtml": "<!-- Adsterra / PropellerAds popunder snippet -->\n<script type=\"text/javascript\">\n  // Put your Adsterra / PropellerAds JS script code here\n  console.log('Ad network popunder script loaded');\n</script>",
-      "label": "Ad Network Popunder"
     }
   },
   "stats": {

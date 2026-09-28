@@ -31,20 +31,19 @@ export const MovieCard: React.FC<MovieCardProps> = ({
           loading="lazy"
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           onError={(e) => {
-            // Fallback image if broken
-            (e.target as HTMLImageElement).src = '/src/assets/images/poster_action_sci_1790591190701.jpg';
+            (e.target as HTMLImageElement).src = '/images/poster_historical_epic.jpg';
           }}
         />
 
         {/* Top Badges */}
         <div className="absolute top-2 left-2 right-2 flex items-center justify-between pointer-events-none">
           {/* Quality Badge */}
-          <span className="rounded bg-black/75 px-1.5 py-0.5 text-[10px] font-bold text-amber-400 backdrop-blur-xs border border-amber-500/30">
-            {movie.quality ? movie.quality.split(' ')[0] : '1080p'}
+          <span className="rounded bg-red-600/90 px-1.5 py-0.5 text-[9px] font-black uppercase tracking-wider text-white backdrop-blur-xs shadow">
+            {movie.duration?.includes('Episode') ? 'Series' : 'Movie'}
           </span>
 
           {/* Rating Badge */}
-          <span className="flex items-center gap-1 rounded bg-black/75 px-1.5 py-0.5 text-[10px] font-bold text-white backdrop-blur-xs border border-neutral-700">
+          <span className="flex items-center gap-1 rounded bg-black/80 px-1.5 py-0.5 text-[10px] font-bold text-amber-400 backdrop-blur-xs border border-neutral-700">
             <Star className="h-2.5 w-2.5 fill-amber-400 text-amber-400" />
             {movie.rating}
           </span>
@@ -91,7 +90,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
 
       {/* Card Body & Metadata */}
       <div className="flex flex-1 flex-col p-3">
-        <h3 className="line-clamp-1 font-semibold text-xs text-white group-hover:text-amber-400 transition-colors">
+        <h3 className="line-clamp-2 font-semibold text-xs text-white group-hover:text-red-400 transition-colors leading-snug">
           {movie.title}
         </h3>
 

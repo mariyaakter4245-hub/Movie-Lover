@@ -33,11 +33,13 @@ export const MovieGrid: React.FC<MovieGridProps> = ({
 
   const categories = [
     'All',
-    'South Hindi Dubbed',
-    'Bollywood',
-    'Hollywood Dual Audio',
-    'Bengali Movies',
-    'Web Series'
+    'Movies',
+    'Drama',
+    'Kolkata Bangla',
+    'Hindi Dubbed',
+    'Dual & Multi Audio',
+    'Bangladeshi',
+    'Hollywood Movies'
   ];
 
   const qualities = ['All', '1080p', '720p', '480p', '4K'];
