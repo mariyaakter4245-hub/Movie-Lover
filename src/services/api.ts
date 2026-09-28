@@ -180,7 +180,34 @@ export async function syncToDisk(): Promise<{ success: boolean; message: string;
   return await res.json();
 }
 
-// 5. Bookmarks in LocalStorage
+// 5. Direct GitHub API Sync via Personal Access Token (PAT)
+export async function testGithubConnection(token: string, repo: string): Promise<{ success: boolean; fullName: string; defaultBranch: string }> {
+  const res = await fetch('/api/github/test', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ token, repo })
+  });
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({}));
+    throw new Error(data.error || 'Failed to connect to GitHub repository');
+  }
+  return await res.json();
+}
+
+export async function syncToGithub(payload?: { token?: string; repo?: string; branch?: string }): Promise<{ success: boolean; message: string; timestamp: string; results: any[] }> {
+  const res = await fetch('/api/github/sync', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload || {})
+  });
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({}));
+    throw new Error(data.error || 'Failed to sync to GitHub repository');
+  }
+  return await res.json();
+}
+
+// 6. Bookmarks in LocalStorage
 export function getStoredBookmarks(): string[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEYS.BOOKMARKS);

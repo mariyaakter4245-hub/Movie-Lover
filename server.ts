@@ -188,6 +188,130 @@ async function startServer() {
     }
   });
 
+  // 5. GitHub Direct Integration & PAT Auto-Sync
+  app.post('/api/github/test', async (req, res) => {
+    try {
+      const { token, repo } = req.body;
+      if (!token || !repo) {
+        return res.status(400).json({ error: 'GitHub PAT Token and Repository (owner/repo) are required' });
+      }
+      const cleanRepo = repo.replace(/^https?:\/\/github\.com\//, '').replace(/\/$/, '');
+      const response = await fetch(`https://api.github.com/repos/${cleanRepo}`, {
+        headers: {
+          'Authorization': `token ${token.trim()}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'User-Agent': 'MovieBaaz-Admin'
+        }
+      });
+      if (!response.ok) {
+        const errorData: any = await response.json().catch(() => ({}));
+        return res.status(response.status).json({
+          error: errorData.message || 'Failed to authenticate with GitHub repository'
+        });
+      }
+      const repoData: any = await response.json();
+      res.json({
+        success: true,
+        fullName: repoData.full_name,
+        defaultBranch: repoData.default_branch,
+        private: repoData.private
+      });
+    } catch (err: any) {
+      res.status(500).json({ error: err.message || 'GitHub connection failed' });
+    }
+  });
+
+  app.post('/api/github/sync', async (req, res) => {
+    try {
+      const settings = readJsonFile<any>(SETTINGS_FILE, {});
+      const token = req.body.token || settings.githubToken;
+      const repo = req.body.repo || settings.githubRepo;
+      const branch = req.body.branch || settings.githubBranch || 'main';
+
+      if (!token || !repo) {
+        return res.status(400).json({ error: 'Please configure GitHub PAT Token and Repository first' });
+      }
+
+      const cleanRepo = repo.replace(/^https?:\/\/github\.com\//, '').replace(/\/$/, '');
+      const filesToSync = [
+        { path: 'data/movies.json', fullPath: MOVIES_FILE },
+        { path: 'data/ads.json', fullPath: ADS_FILE },
+        { path: 'data/settings.json', fullPath: SETTINGS_FILE }
+      ];
+
+      const results = [];
+
+      for (const file of filesToSync) {
+        let content = '';
+        if (fs.existsSync(file.fullPath)) {
+          content = fs.readFileSync(file.fullPath, 'utf-8');
+        } else {
+          continue;
+        }
+
+        const base64Content = Buffer.from(content, 'utf-8').toString('base64');
+        const fileUrl = `https://api.github.com/repos/${cleanRepo}/contents/${file.path}?ref=${branch}`;
+
+        let sha: string | undefined = undefined;
+        try {
+          const getRes = await fetch(fileUrl, {
+            headers: {
+              'Authorization': `token ${token.trim()}`,
+              'Accept': 'application/vnd.github.v3+json',
+              'User-Agent': 'MovieBaaz-Admin'
+            }
+          });
+          if (getRes.ok) {
+            const getData: any = await getRes.json();
+            sha = getData.sha;
+          }
+        } catch (e) {}
+
+        const putUrl = `https://api.github.com/repos/${cleanRepo}/contents/${file.path}`;
+        const putRes = await fetch(putUrl, {
+          method: 'PUT',
+          headers: {
+            'Authorization': `token ${token.trim()}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'User-Agent': 'MovieBaaz-Admin',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: `Update ${file.path} from MovieBaaz Admin`,
+            content: base64Content,
+            branch,
+            ...(sha ? { sha } : {})
+          })
+        });
+
+        if (putRes.ok) {
+          const putData: any = await putRes.json();
+          results.push({ file: file.path, status: 'synced', commit: putData.commit?.sha?.substring(0, 7) });
+        } else {
+          const errData: any = await putRes.json().catch(() => ({}));
+          results.push({ file: file.path, status: 'error', error: errData.message });
+        }
+      }
+
+      const now = new Date().toISOString();
+      settings.githubLastSync = now;
+      settings.githubSyncStatus = 'success';
+      if (token) settings.githubToken = token;
+      if (repo) settings.githubRepo = repo;
+      if (branch) settings.githubBranch = branch;
+      writeJsonFile(SETTINGS_FILE, settings);
+
+      res.json({
+        success: true,
+        message: 'Successfully pushed all data files to GitHub!',
+        timestamp: now,
+        results
+      });
+    } catch (err: any) {
+      res.status(500).json({ error: err.message || 'GitHub sync failed' });
+    }
+  });
+
   // Mount Vite or static server
   if (!isProd) {
     const { createServer: createViteServer } = await import('vite');

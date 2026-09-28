@@ -274,6 +274,22 @@ export const MovieDetailModal: React.FC<MovieDetailModalProps> = ({
             </div>
           )}
 
+          {/* Per-Movie Custom Ad (Above Player) */}
+          {!isAdminView && movie.movieAdEnabled && (movie.movieAdPosition === 'above_player' || movie.movieAdPosition === 'both') && (
+            <div className="overflow-hidden rounded-xl border border-amber-500/30 bg-[#141620] p-3 text-center shadow-lg">
+              <span className="block text-[10px] font-bold uppercase tracking-wider text-amber-500 mb-1.5">
+                Sponsored / Movie Special Offer
+              </span>
+              {movie.movieAdType === 'banner' && movie.movieAdBannerUrl ? (
+                <a href={movie.movieAdTargetUrl || '#'} target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded-lg">
+                  <img src={movie.movieAdBannerUrl} alt="Movie Sponsor" className="w-full max-h-32 object-contain mx-auto" />
+                </a>
+              ) : (
+                <div dangerouslySetInnerHTML={{ __html: movie.movieAdScript || '' }} />
+              )}
+            </div>
+          )}
+
           {/* Interactive Player Section */}
           <div className="rounded-xl border border-neutral-800 bg-neutral-900/40 p-4 sm:p-5 space-y-4">
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-neutral-800 pb-3">
@@ -343,6 +359,22 @@ export const MovieDetailModal: React.FC<MovieDetailModalProps> = ({
                 masterEnabled={adsConfig.masterAdsEnabled}
                 isAdminView={isAdminView}
               />
+            </div>
+          )}
+
+          {/* Per-Movie Custom Ad (Above Download) */}
+          {!isAdminView && movie.movieAdEnabled && (movie.movieAdPosition === 'above_download' || movie.movieAdPosition === 'both') && (
+            <div className="overflow-hidden rounded-xl border border-amber-500/30 bg-[#141620] p-3 text-center shadow-lg">
+              <span className="block text-[10px] font-bold uppercase tracking-wider text-amber-500 mb-1.5">
+                ⚡ Direct High Speed Sponsor for this Movie
+              </span>
+              {movie.movieAdType === 'banner' && movie.movieAdBannerUrl ? (
+                <a href={movie.movieAdTargetUrl || '#'} target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded-lg">
+                  <img src={movie.movieAdBannerUrl} alt="Movie Sponsor" className="w-full max-h-32 object-contain mx-auto" />
+                </a>
+              ) : (
+                <div dangerouslySetInnerHTML={{ __html: movie.movieAdScript || '' }} />
+              )}
             </div>
           )}
 

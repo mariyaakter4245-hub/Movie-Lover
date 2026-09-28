@@ -3,12 +3,14 @@ import {
   Film, DollarSign, Settings, Send, Plus, Trash2, Edit3, Save,
   RotateCcw, Check, ExternalLink, Shield, ArrowLeft, Download,
   Search, Eye, Copy, RefreshCw, FileText, CheckCircle2, Code2,
-  Image as ImageIcon, Sparkles, AlertCircle
+  Image as ImageIcon, Sparkles, AlertCircle, GitBranch, Key,
+  UploadCloud, CheckCircle, AlertTriangle
 } from 'lucide-react';
 import { Movie, AdsConfig, SiteSettings, MovieRequest, AdSlotConfig } from '../types';
 import {
   createMovie, updateMovie, deleteMovie, saveAdsConfig,
-  saveSiteSettings, syncToDisk, updateRequestStatus
+  saveSiteSettings, syncToDisk, updateRequestStatus,
+  testGithubConnection, syncToGithub
 } from '../services/api';
 import { AdBanner } from './AdBanner';
 
@@ -33,13 +35,24 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
   onCloseAdmin,
   onShowToast
 }) => {
-  const [activeTab, setActiveTab] = useState<'movies' | 'ads' | 'settings' | 'requests'>('movies');
+  const [activeTab, setActiveTab] = useState<'movies' | 'ads' | 'github' | 'settings' | 'requests'>('movies');
   const [movieSearch, setMovieSearch] = useState('');
   const [isEditingMovie, setIsEditingMovie] = useState<Movie | null>(null);
   const [isAddMovieModalOpen, setIsAddMovieModalOpen] = useState(false);
   const [isSyncing, setIsSyncing] = useState(false);
   const [lastSyncTime, setLastSyncTime] = useState<string>(settings.lastSynced || '');
   const [adPreviewSlotId, setAdPreviewSlotId] = useState<string | null>(null);
+
+  // GitHub Auto-Sync State
+  const [githubPat, setGithubPat] = useState(settings.githubToken || '');
+  const [githubRepo, setGithubRepo] = useState(settings.githubRepo || '');
+  const [githubBranch, setGithubBranch] = useState(settings.githubBranch || 'main');
+  const [showGithubPat, setShowGithubPat] = useState(false);
+  const [isTestingGithub, setIsTestingGithub] = useState(false);
+  const [isSyncingGithub, setIsSyncingGithub] = useState(false);
+  const [githubStatus, setGithubStatus] = useState<{ success?: boolean; message?: string } | null>(
+    settings.githubLastSync ? { success: true, message: `Connected (Last sync: ${new Date(settings.githubLastSync).toLocaleString()})` } : null
+  );
 
   // Local state for editable ads config
   const [editableAds, setEditableAds] = useState<AdsConfig>(adsConfig);
@@ -97,12 +110,81 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
   // Save Site Settings
   const handleSaveSettings = async () => {
     try {
-      await saveSiteSettings(editableSettings);
+      await saveSiteSettings({
+        ...editableSettings,
+        githubToken: githubPat,
+        githubRepo: githubRepo,
+        githubBranch: githubBranch
+      });
       await onRefreshSettings();
       onShowToast('✓ Site settings updated and saved to data/settings.json!');
     } catch (err) {
       console.error(err);
       onShowToast('Failed to save settings.');
+    }
+  };
+
+  // Test GitHub PAT Connection
+  const handleTestGithub = async () => {
+    if (!githubPat.trim() || !githubRepo.trim()) {
+      alert('Please enter both your GitHub PAT Token and Repository (e.g. username/repo)');
+      return;
+    }
+    setIsTestingGithub(true);
+    setGithubStatus(null);
+    try {
+      const res = await testGithubConnection(githubPat.trim(), githubRepo.trim());
+      setGithubStatus({
+        success: true,
+        message: `Successfully connected to GitHub repository "${res.fullName}" (Branch: ${res.defaultBranch})!`
+      });
+      // Save settings automatically
+      await saveSiteSettings({
+        ...editableSettings,
+        githubToken: githubPat.trim(),
+        githubRepo: githubRepo.trim(),
+        githubBranch: githubBranch.trim() || res.defaultBranch || 'main'
+      });
+      onShowToast('✓ GitHub connection verified and saved!');
+    } catch (err: any) {
+      console.error(err);
+      setGithubStatus({
+        success: false,
+        message: err.message || 'Failed to authenticate with GitHub. Check your token and repository.'
+      });
+    } finally {
+      setIsTestingGithub(false);
+    }
+  };
+
+  // 1-Click Push to GitHub
+  const handleSyncGithub = async () => {
+    if (!githubPat.trim() || !githubRepo.trim()) {
+      alert('Please enter your GitHub PAT Token and Repository first.');
+      return;
+    }
+    setIsSyncingGithub(true);
+    try {
+      const res = await syncToGithub({
+        token: githubPat.trim(),
+        repo: githubRepo.trim(),
+        branch: githubBranch.trim() || 'main'
+      });
+      setGithubStatus({
+        success: true,
+        message: `✓ Successfully pushed data/movies.json and data/ads.json to GitHub! (${new Date().toLocaleTimeString()})`
+      });
+      onShowToast('✓ 1-Click sync complete: All movies & ads pushed to your GitHub repo!');
+      await onRefreshSettings();
+    } catch (err: any) {
+      console.error(err);
+      setGithubStatus({
+        success: false,
+        message: err.message || 'GitHub push failed. Please check token permissions.'
+      });
+      onShowToast('GitHub push failed.');
+    } finally {
+      setIsSyncingGithub(false);
     }
   };
 
@@ -393,6 +475,21 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
             <DollarSign className="h-4 w-4" />
             <span>Ad Networks & Monetization</span>
             {editableAds.masterAdsEnabled && (
+              <span className="h-2 w-2 rounded-full bg-emerald-400" />
+            )}
+          </button>
+
+          <button
+            onClick={() => setActiveTab('github')}
+            className={`flex items-center gap-2 rounded-lg px-4 py-2 text-xs font-bold transition-all cursor-pointer ${
+              activeTab === 'github'
+                ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20'
+                : 'bg-neutral-900 text-neutral-400 hover:bg-neutral-800 hover:text-white border border-neutral-800'
+            }`}
+          >
+            <GitBranch className="h-4 w-4" />
+            <span>GitHub PAT & Auto-Sync</span>
+            {githubPat && (
               <span className="h-2 w-2 rounded-full bg-emerald-400" />
             )}
           </button>
@@ -790,7 +887,150 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
           </div>
         )}
 
-        {/* TAB 3: SITE SETTINGS & PERSISTENCE */}
+        {/* TAB: GITHUB INTEGRATION & AUTO-SYNC */}
+        {activeTab === 'github' && (
+          <div className="mt-6 space-y-6">
+            <div className="rounded-xl border border-neutral-800 bg-[#12141c] p-5 space-y-5">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-neutral-800 pb-4">
+                <div>
+                  <h3 className="font-['Cabinet_Grotesk'] text-base font-bold text-white flex items-center gap-2">
+                    <GitBranch className="h-5 w-5 text-amber-500" />
+                    GitHub Personal Access Token (PAT) & Repository Auto-Sync
+                  </h3>
+                  <p className="text-xs text-neutral-400 mt-1">
+                    Connect your GitHub repository to enable 1-click automatic backup and synchronization. Every time you add, edit, or delete a movie, you can sync directly to your GitHub repo.
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={handleSyncGithub}
+                    disabled={isSyncingGithub || !githubPat || !githubRepo}
+                    className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-amber-600 to-amber-500 px-4 py-2 text-xs font-bold text-black shadow-md hover:from-amber-500 hover:to-amber-400 disabled:opacity-50 cursor-pointer active:scale-95"
+                  >
+                    <UploadCloud className={`h-4 w-4 ${isSyncingGithub ? 'animate-bounce' : ''}`} />
+                    <span>{isSyncingGithub ? 'Pushing to GitHub...' : 'Push to GitHub (1-Click)'}</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Status Banner */}
+              {githubStatus && (
+                <div
+                  className={`rounded-xl border p-4 text-xs flex items-start gap-3 ${
+                    githubStatus.success
+                      ? 'border-emerald-500/40 bg-emerald-950/20 text-emerald-300'
+                      : 'border-red-500/40 bg-red-950/20 text-red-300'
+                  }`}
+                >
+                  {githubStatus.success ? (
+                    <CheckCircle className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                  ) : (
+                    <AlertTriangle className="h-4 w-4 text-red-400 shrink-0 mt-0.5" />
+                  )}
+                  <div>
+                    <p className="font-bold">{githubStatus.success ? 'GitHub Status: Active & Ready' : 'GitHub Connection Error'}</p>
+                    <p className="mt-0.5 text-[11px] opacity-90">{githubStatus.message}</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Configuration Inputs */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="sm:col-span-2">
+                  <div className="flex items-center justify-between mb-1">
+                    <label className="text-xs font-semibold text-neutral-300 flex items-center gap-1.5">
+                      <Key className="h-3.5 w-3.5 text-amber-400" />
+                      <span>GitHub Personal Access Token (PAT) *</span>
+                    </label>
+                    <button
+                      type="button"
+                      onClick={() => setShowGithubPat(!showGithubPat)}
+                      className="text-[11px] text-amber-400 hover:underline cursor-pointer"
+                    >
+                      {showGithubPat ? 'Hide Token' : 'Show Token'}
+                    </button>
+                  </div>
+                  <input
+                    type={showGithubPat ? 'text' : 'password'}
+                    value={githubPat}
+                    onChange={(e) => setGithubPat(e.target.value)}
+                    placeholder="ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                    className="w-full font-mono rounded-lg border border-neutral-700 bg-neutral-900 px-3 py-2 text-xs text-white placeholder-neutral-500 focus:border-amber-500 focus:outline-none"
+                  />
+                  <p className="mt-1 text-[10px] text-neutral-500">
+                    Your token is stored safely in data/settings.json and used only to push movie data to your repo.
+                  </p>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-neutral-300 mb-1">
+                    GitHub Repository (owner/repo) *
+                  </label>
+                  <input
+                    type="text"
+                    value={githubRepo}
+                    onChange={(e) => setGithubRepo(e.target.value)}
+                    placeholder="e.g. mariya/moviebaaz"
+                    className="w-full rounded-lg border border-neutral-700 bg-neutral-900 px-3 py-2 text-xs text-white placeholder-neutral-500 focus:border-amber-500 focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-neutral-300 mb-1">
+                    Repository Branch
+                  </label>
+                  <input
+                    type="text"
+                    value={githubBranch}
+                    onChange={(e) => setGithubBranch(e.target.value)}
+                    placeholder="main"
+                    className="w-full rounded-lg border border-neutral-700 bg-neutral-900 px-3 py-2 text-xs text-white focus:border-amber-500 focus:outline-none"
+                  />
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-neutral-800">
+                <button
+                  type="button"
+                  onClick={handleTestGithub}
+                  disabled={isTestingGithub || !githubPat || !githubRepo}
+                  className="flex items-center gap-1.5 rounded-lg border border-neutral-700 bg-neutral-800 px-3.5 py-2 text-xs font-semibold text-white hover:bg-neutral-700 disabled:opacity-50 cursor-pointer"
+                >
+                  <Check className="h-3.5 w-3.5 text-amber-400" />
+                  <span>{isTestingGithub ? 'Verifying Token...' : 'Test Token & Connection'}</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handleSaveSettings}
+                  className="flex items-center gap-1.5 rounded-lg bg-amber-500 px-4 py-2 text-xs font-bold text-black hover:bg-amber-400 cursor-pointer shadow"
+                >
+                  <Save className="h-3.5 w-3.5" />
+                  <span>Save GitHub Credentials</span>
+                </button>
+              </div>
+            </div>
+
+            {/* How to create a PAT Guide */}
+            <div className="rounded-xl border border-neutral-800 bg-[#12141c] p-5 space-y-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+                <Sparkles className="h-4 w-4" />
+                How to generate your GitHub PAT Token (2-Minute Guide)
+              </h4>
+              <ol className="text-xs text-neutral-300 space-y-2 list-decimal list-inside leading-relaxed">
+                <li>Log in to your GitHub account and go to <strong>Settings &gt; Developer settings &gt; Personal access tokens &gt; Tokens (classic)</strong> (or visit <code className="text-amber-400">github.com/settings/tokens</code>).</li>
+                <li>Click <strong>"Generate new token (classic)"</strong>.</li>
+                <li>Give it a Note like <code className="text-amber-400">MovieBaaz Sync</code> and set Expiration to 90 days or No expiration.</li>
+                <li>Check the <strong><code className="text-amber-400">repo</code></strong> scope checkbox (Full control of private repositories).</li>
+                <li>Click <strong>"Generate token"</strong>, copy the key (starts with <code className="text-emerald-400">ghp_...</code>) and paste it into the field above!</li>
+              </ol>
+            </div>
+          </div>
+        )}
+
+        {/* TAB 4: SITE SETTINGS & PERSISTENCE */}
         {activeTab === 'settings' && (
           <div className="mt-6 space-y-6">
             <div className="rounded-xl border border-neutral-800 bg-[#12141c] p-5 space-y-5">
@@ -1316,6 +1556,102 @@ const AddEditMovieModal: React.FC<AddEditMovieModalProps> = ({ movie, onClose, o
                 placeholder="Director name"
                 className="w-full rounded-lg border border-neutral-700 bg-neutral-900 px-3 py-2 text-xs text-white focus:border-amber-500 focus:outline-none"
               />
+            </div>
+
+            {/* Per-Movie Custom Ad Integration */}
+            <div className="sm:col-span-2 rounded-xl border border-amber-500/40 bg-amber-950/20 p-4 space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <DollarSign className="h-4 w-4 text-amber-400" />
+                  <span className="text-xs font-bold text-white">Movie-Specific Ad & Sponsor (Optional)</span>
+                </div>
+                <label className="flex items-center gap-2 text-xs text-amber-300 font-semibold cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={formData.movieAdEnabled || false}
+                    onChange={(e) => setFormData({ ...formData, movieAdEnabled: e.target.checked })}
+                    className="h-4 w-4 accent-amber-500 cursor-pointer"
+                  />
+                  <span>Enable Custom Ad for this Movie</span>
+                </label>
+              </div>
+
+              {formData.movieAdEnabled && (
+                <div className="space-y-3 pt-2 border-t border-amber-900/40">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-[11px] font-semibold text-neutral-300 mb-1">
+                        Ad Format
+                      </label>
+                      <select
+                        value={formData.movieAdType || 'custom_html'}
+                        onChange={(e) => setFormData({ ...formData, movieAdType: e.target.value as any })}
+                        className="w-full rounded-lg border border-neutral-700 bg-neutral-900 px-3 py-1.5 text-xs text-white focus:border-amber-500 focus:outline-none"
+                      >
+                        <option value="custom_html">Ad Network Script / HTML (Adsterra, Adsense, Propeller)</option>
+                        <option value="banner">Custom Image Banner + Target Affiliate URL</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-semibold text-neutral-300 mb-1">
+                        Display Placement
+                      </label>
+                      <select
+                        value={formData.movieAdPosition || 'above_download'}
+                        onChange={(e) => setFormData({ ...formData, movieAdPosition: e.target.value as any })}
+                        className="w-full rounded-lg border border-neutral-700 bg-neutral-900 px-3 py-1.5 text-xs text-white focus:border-amber-500 focus:outline-none"
+                      >
+                        <option value="above_download">Above Download Links (Highest Conversion)</option>
+                        <option value="above_player">Above Streaming Player</option>
+                        <option value="both">Both Above Player & Above Download</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  {formData.movieAdType === 'banner' ? (
+                    <div className="space-y-2">
+                      <div>
+                        <label className="block text-[11px] font-semibold text-neutral-300 mb-1">
+                          Banner Image URL
+                        </label>
+                        <input
+                          type="text"
+                          value={formData.movieAdBannerUrl || ''}
+                          onChange={(e) => setFormData({ ...formData, movieAdBannerUrl: e.target.value })}
+                          placeholder="https://example.com/banner-728x90.jpg"
+                          className="w-full rounded-lg border border-neutral-700 bg-neutral-900 px-3 py-1.5 text-xs text-white focus:border-amber-500 focus:outline-none"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-[11px] font-semibold text-neutral-300 mb-1">
+                          Destination Sponsor Link / Affiliate URL
+                        </label>
+                        <input
+                          type="text"
+                          value={formData.movieAdTargetUrl || ''}
+                          onChange={(e) => setFormData({ ...formData, movieAdTargetUrl: e.target.value })}
+                          placeholder="https://sponsor.com?ref=moviebaaz"
+                          className="w-full rounded-lg border border-neutral-700 bg-neutral-900 px-3 py-1.5 text-xs text-white focus:border-amber-500 focus:outline-none"
+                        />
+                      </div>
+                    </div>
+                  ) : (
+                    <div>
+                      <label className="block text-[11px] font-semibold text-neutral-300 mb-1">
+                        Paste Adsterra / Google AdSense / HTML Script Code
+                      </label>
+                      <textarea
+                        rows={3}
+                        value={formData.movieAdScript || ''}
+                        onChange={(e) => setFormData({ ...formData, movieAdScript: e.target.value })}
+                        placeholder="<!-- Paste your Adsterra, PropellerAds or custom HTML code here -->"
+                        className="w-full font-mono rounded-lg border border-neutral-700 bg-neutral-900 p-2 text-xs text-amber-200/90 focus:border-amber-500 focus:outline-none"
+                      />
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
 

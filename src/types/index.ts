@@ -40,6 +40,13 @@ export interface Movie {
   downloadLinks: DownloadTier[];
   screenshots: string[];
   createdAt: string;
+  // Per-movie customized ads
+  movieAdEnabled?: boolean;
+  movieAdType?: 'custom_html' | 'banner';
+  movieAdScript?: string;
+  movieAdBannerUrl?: string;
+  movieAdTargetUrl?: string;
+  movieAdPosition?: 'above_player' | 'above_download' | 'both';
 }
 
 export type AdType = 'banner' | 'custom_html' | 'script';
@@ -87,4 +94,10 @@ export interface SiteSettings {
   allowUserRequests: boolean;
   requests: MovieRequest[];
   lastSynced: string;
+  // GitHub Integration & Auto-Sync
+  githubToken?: string;
+  githubRepo?: string; // e.g. "username/moviebaaz"
+  githubBranch?: string; // e.g. "main"
+  githubLastSync?: string;
+  githubSyncStatus?: string;
 }

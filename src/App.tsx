@@ -52,22 +52,42 @@ export default function App() {
       ]);
       if (Array.isArray(moviesData) && moviesData.length > 0) {
         setMovies(moviesData);
-      } else {
-        setMovies(INITIAL_MOVIES);
       }
       if (adsData && adsData.slots) setAdsConfig(adsData);
       if (settingsData && settingsData.siteName) setSettings(settingsData);
     } catch (err) {
       console.error('Error loading initial data:', err);
-      setMovies(INITIAL_MOVIES);
     }
   };
 
+  // URL Routing: Support direct /admin URL access & browser back/forward buttons
   useEffect(() => {
-    if (!movies || movies.length === 0) {
-      setMovies(INITIAL_MOVIES);
+    const isAtAdminRoute = window.location.pathname.startsWith('/admin') || window.location.hash === '#admin';
+    if (isAtAdminRoute) {
+      if (isAdminAuthenticated) {
+        setIsAdminOpen(true);
+      } else {
+        setIsAdminLoginOpen(true);
+      }
     }
-  }, [movies]);
+
+    const handlePopState = () => {
+      const onAdmin = window.location.pathname.startsWith('/admin') || window.location.hash === '#admin';
+      if (onAdmin) {
+        if (isAdminAuthenticated) {
+          setIsAdminOpen(true);
+        } else {
+          setIsAdminLoginOpen(true);
+        }
+      } else {
+        setIsAdminOpen(false);
+        setIsAdminLoginOpen(false);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [isAdminAuthenticated]);
 
   useEffect(() => {
     loadAllData();
@@ -102,13 +122,23 @@ export default function App() {
   const bookmarkedMovies = movies.filter((m) => bookmarkedIds.includes(m.id));
   const featuredMovies = movies.filter((m) => m.isFeatured);
 
-  // Admin access control
+  // Admin access control & URL route update
   const handleOpenAdmin = () => {
+    if (window.location.pathname !== '/admin') {
+      window.history.pushState({ route: 'admin' }, '', '/admin');
+    }
     if (isAdminAuthenticated) {
       setIsAdminOpen(true);
     } else {
       setIsAdminLoginOpen(true);
     }
+  };
+
+  const handleCloseAdmin = () => {
+    if (window.location.pathname === '/admin') {
+      window.history.pushState({ route: 'home' }, '', '/');
+    }
+    setIsAdminOpen(false);
   };
 
   // If Admin view is active, render ADMIN PANEL ONLY (NO ADS SHOWN EVER)
@@ -136,7 +166,7 @@ export default function App() {
             const data = await getSiteSettings();
             if (data) setSettings(data);
           }}
-          onCloseAdmin={() => setIsAdminOpen(false)}
+          onCloseAdmin={handleCloseAdmin}
           onShowToast={showToast}
         />
       </>
@@ -357,13 +387,18 @@ export default function App() {
       {/* Admin Login PIN Modal */}
       <AdminLoginModal
         isOpen={isAdminLoginOpen}
-        onClose={() => setIsAdminLoginOpen(false)}
+        onClose={() => {
+          setIsAdminLoginOpen(false);
+          if (window.location.pathname === '/admin') {
+            window.history.pushState({ route: 'home' }, '', '/');
+          }
+        }}
         onSuccess={() => {
           setIsAdminAuthenticated(true);
           setIsAdminOpen(true);
           showToast('Welcome to MovieBaaz Admin Panel');
         }}
-        correctPin={settings?.adminPin || 'admin123'}
+        correctPin={settings?.adminPin || 'Aa123456@'}
       />
     </div>
   );
