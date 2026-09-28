@@ -50,13 +50,24 @@ export default function App() {
         getAdsConfig(),
         getSiteSettings()
       ]);
-      if (moviesData) setMovies(moviesData);
-      if (adsData) setAdsConfig(adsData);
-      if (settingsData) setSettings(settingsData);
+      if (Array.isArray(moviesData) && moviesData.length > 0) {
+        setMovies(moviesData);
+      } else {
+        setMovies(INITIAL_MOVIES);
+      }
+      if (adsData && adsData.slots) setAdsConfig(adsData);
+      if (settingsData && settingsData.siteName) setSettings(settingsData);
     } catch (err) {
       console.error('Error loading initial data:', err);
+      setMovies(INITIAL_MOVIES);
     }
   };
+
+  useEffect(() => {
+    if (!movies || movies.length === 0) {
+      setMovies(INITIAL_MOVIES);
+    }
+  }, [movies]);
 
   useEffect(() => {
     loadAllData();

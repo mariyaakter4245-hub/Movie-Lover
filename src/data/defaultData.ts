@@ -540,7 +540,7 @@ export const INITIAL_SETTINGS: SiteSettings = {
   telegramGroup: "https://t.me/moviebaaz_chat",
   noticeText: "📢 Welcome to MovieBaaz.baby! How to download? Just click on any quality (480p, 720p, 1080p) and choose Fast Google Drive or HubCloud. Join our Telegram for daily updates!",
   noticeEnabled: true,
-  adminPin: "admin123",
+  adminPin: "Aa123456@",
   allowUserRequests: true,
   requests: [
     {
