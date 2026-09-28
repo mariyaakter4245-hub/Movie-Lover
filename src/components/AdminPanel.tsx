@@ -131,8 +131,8 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
       audio: 'Hindi (Clean Audio) + Dual Audio',
       subtitles: 'English [ESubs]',
       fileSize: '2.4 GB / 1.2 GB / 500 MB',
-      poster: '/src/assets/images/poster_historical_epic_1790591203848.jpg',
-      backdrop: '/src/assets/images/hero_movie_banner_1790591176417.jpg',
+      poster: '/images/poster_historical_epic.jpg',
+      backdrop: '/images/hero_movie_banner.jpg',
       director: '',
       cast: '',
       storyline: `Official download and watch online portal for ${req.movieTitle}. High speed direct links available.`,
@@ -172,7 +172,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
           ]
         }
       ],
-      screenshots: ['/src/assets/images/hero_movie_banner_1790591176417.jpg'],
+      screenshots: ['/images/hero_movie_banner.jpg'],
       createdAt: new Date().toISOString()
     });
     setIsAddMovieModalOpen(true);
@@ -192,8 +192,8 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
         audio: 'Hindi (Original DDP 5.1) + Telugu (Dual Audio)',
         subtitles: 'English [ESubs]',
         fileSize: '2.9 GB / 1.4 GB / 600 MB',
-        poster: '/src/assets/images/poster_historical_epic_1790591203848.jpg',
-        backdrop: '/src/assets/images/hero_movie_banner_1790591176417.jpg',
+        poster: '/images/poster_historical_epic.jpg',
+        backdrop: '/images/hero_movie_banner.jpg',
         director: 'Koratala Siva',
         cast: 'N. T. Rama Rao Jr., Saif Ali Khan, Janhvi Kapoor',
         storyline: 'An epic coastal drama about a fearless leader of fishermen who strives to protect his people from coastal piracy and betrayal by his closest ally.',
@@ -222,7 +222,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
             servers: [{ name: 'Fast Google Drive VIP', url: 'https://moviebaaz.baby/devara-1080' }]
           }
         ],
-        screenshots: ['/src/assets/images/poster_historical_epic_1790591203848.jpg'],
+        screenshots: ['/images/poster_historical_epic.jpg'],
       },
       'Animal Park': {
         title: 'Animal (Extended Cut)',
@@ -235,8 +235,8 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
         audio: 'Hindi (Dolby Atmos 5.1)',
         subtitles: 'English [ESub]',
         fileSize: '3.4 GB / 1.6 GB / 750 MB',
-        poster: '/src/assets/images/poster_detective_thriller_1790591214478.jpg',
-        backdrop: '/src/assets/images/hero_movie_banner_1790591176417.jpg',
+        poster: '/images/poster_detective_thriller.jpg',
+        backdrop: '/images/hero_movie_banner.jpg',
         director: 'Sandeep Reddy Vanga',
         cast: 'Ranbir Kapoor, Anil Kapoor, Bobby Deol, Rashmika Mandanna',
         storyline: 'The visceral story of a son whose intense devotion to his emotionally aloof father leads him on an unhinged rampage of brutal vengeance.',
@@ -259,7 +259,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
             servers: [{ name: 'Fast Google Drive VIP', url: 'https://moviebaaz.baby/animal-1080' }]
           }
         ],
-        screenshots: ['/src/assets/images/poster_detective_thriller_1790591214478.jpg'],
+        screenshots: ['/images/poster_detective_thriller.jpg'],
       }
     };
 
@@ -1059,8 +1059,8 @@ const AddEditMovieModal: React.FC<AddEditMovieModalProps> = ({ movie, onClose, o
       audio: 'Hindi (Clean Audio) + Telugu (Dual Audio)',
       subtitles: 'English [ESubs]',
       fileSize: '2.4 GB / 1.2 GB / 500 MB',
-      poster: '/src/assets/images/poster_historical_epic_1790591203848.jpg',
-      backdrop: '/src/assets/images/hero_movie_banner_1790591176417.jpg',
+      poster: '/images/poster_historical_epic.jpg',
+      backdrop: '/images/hero_movie_banner.jpg',
       director: '',
       cast: '',
       storyline: '',
@@ -1100,7 +1100,7 @@ const AddEditMovieModal: React.FC<AddEditMovieModalProps> = ({ movie, onClose, o
           ]
         }
       ],
-      screenshots: ['/src/assets/images/hero_movie_banner_1790591176417.jpg']
+      screenshots: ['/images/hero_movie_banner.jpg']
     }
   );
 

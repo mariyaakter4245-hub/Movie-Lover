@@ -11,8 +11,8 @@
     "audio": "Hindi (Clean HQ) + Telugu (Dual Audio)",
     "subtitles": "English [ESub]",
     "fileSize": "2.8 GB / 1.4 GB / 650 MB",
-    "poster": "/src/assets/images/poster_historical_epic_1790591203848.jpg",
-    "backdrop": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+    "poster": "/images/poster_historical_epic.jpg",
+    "backdrop": "/images/hero_movie_banner.jpg",
     "director": "Sukumar",
     "cast": "Allu Arjun, Rashmika Mandanna, Fahadh Faasil, Sunil",
     "storyline": "Pushpa Raj establishes an unassailable grip over the red sandalwood syndicate across international borders. However, Bhanwar Singh Shekhawat IPS vows retribution, sparking an explosive clash of dominance, power, and ego.",
@@ -66,8 +66,8 @@
       }
     ],
     "screenshots": [
-      "/src/assets/images/hero_movie_banner_1790591176417.jpg",
-      "/src/assets/images/poster_historical_epic_1790591203848.jpg"
+      "/images/hero_movie_banner.jpg",
+      "/images/poster_historical_epic.jpg"
     ],
     "createdAt": "2025-01-10T12:00:00.000Z"
   },
@@ -83,8 +83,8 @@
     "audio": "Hindi (Original) + Telugu + Tamil",
     "subtitles": "English [MSubs]",
     "fileSize": "3.1 GB / 1.5 GB / 700 MB",
-    "poster": "/src/assets/images/poster_action_sci_1790591190701.jpg",
-    "backdrop": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+    "poster": "/images/poster_action_sci.jpg",
+    "backdrop": "/images/hero_movie_banner.jpg",
     "director": "Nag Ashwin",
     "cast": "Prabhas, Amitabh Bachchan, Kamal Haasan, Deepika Padukone",
     "storyline": "In the dystopian desert city of Kasi in the year 2898 AD, ruled by the tyrannical god-king Supreme Yaskin, a pregnant refugee carries the hope of humanity's rebirth as an ancient warrior rises to protect her.",
@@ -125,7 +125,7 @@
       }
     ],
     "screenshots": [
-      "/src/assets/images/poster_action_sci_1790591190701.jpg"
+      "/images/poster_action_sci.jpg"
     ],
     "createdAt": "2025-01-08T10:00:00.000Z"
   },
@@ -141,8 +141,8 @@
     "audio": "Hindi (Dolby Digital 5.1)",
     "subtitles": "English [ESubs]",
     "fileSize": "2.3 GB / 1.2 GB / 550 MB",
-    "poster": "/src/assets/images/poster_detective_thriller_1790591214478.jpg",
-    "backdrop": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+    "poster": "/images/poster_detective_thriller.jpg",
+    "backdrop": "/images/hero_movie_banner.jpg",
     "director": "Amar Kaushik",
     "cast": "Rajkummar Rao, Shraddha Kapoor, Pankaj Tripathi, Abhishek Banerjee",
     "storyline": "The quiet town of Chanderi is besieged by a terrifying headless ghost known as Sarkata, kidnapping progressive women. Vicky and his eccentric band of friends must team up with Stree to save their town.",
@@ -182,7 +182,7 @@
       }
     ],
     "screenshots": [
-      "/src/assets/images/poster_detective_thriller_1790591214478.jpg"
+      "/images/poster_detective_thriller.jpg"
     ],
     "createdAt": "2025-01-05T08:00:00.000Z"
   },
@@ -198,8 +198,8 @@
     "audio": "Bengali (Clean Audio 5.1)",
     "subtitles": "English [ESubs]",
     "fileSize": "2.1 GB / 1.1 GB / 450 MB",
-    "poster": "/src/assets/images/poster_detective_thriller_1790591214478.jpg",
-    "backdrop": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+    "poster": "/images/poster_detective_thriller.jpg",
+    "backdrop": "/images/hero_movie_banner.jpg",
     "director": "Raihan Rafi",
     "cast": "Shakib Khan, Mimi Chakraborty, Chanchal Chowdhury, Nabila",
     "storyline": "The ruthless rise and bloodstained criminal career of Galib, a reckless small-time criminal who ascends to become the most dreaded mafia don Toofan across the underworld of Bangladesh in the 1990s.",
@@ -239,7 +239,7 @@
       }
     ],
     "screenshots": [
-      "/src/assets/images/poster_detective_thriller_1790591214478.jpg"
+      "/images/poster_detective_thriller.jpg"
     ],
     "createdAt": "2025-01-02T14:00:00.000Z"
   },
@@ -255,8 +255,8 @@
     "audio": "Hindi (Clean DDP 5.1) + English (Dual Audio)",
     "subtitles": "English [ESub] + Hindi",
     "fileSize": "2.5 GB / 1.3 GB / 600 MB",
-    "poster": "/src/assets/images/poster_action_sci_1790591190701.jpg",
-    "backdrop": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+    "poster": "/images/poster_action_sci.jpg",
+    "backdrop": "/images/hero_movie_banner.jpg",
     "director": "Shawn Levy",
     "cast": "Ryan Reynolds, Hugh Jackman, Emma Corrin, Matthew Macfadyen",
     "storyline": "Wolverine is recovering from his injuries when he crosses paths with the loudmouth Deadpool. They team up to defeat a common enemy threatening the stability of their respective timelines.",
@@ -296,7 +296,7 @@
       }
     ],
     "screenshots": [
-      "/src/assets/images/poster_action_sci_1790591190701.jpg"
+      "/images/poster_action_sci.jpg"
     ],
     "createdAt": "2024-12-25T11:00:00.000Z"
   },
@@ -312,8 +312,8 @@
     "audio": "Hindi (Original Audio)",
     "subtitles": "English [ESubs]",
     "fileSize": "3.5 GB (Pack) / 350MB (Per Ep)",
-    "poster": "/src/assets/images/poster_historical_epic_1790591203848.jpg",
-    "backdrop": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+    "poster": "/images/poster_historical_epic.jpg",
+    "backdrop": "/images/hero_movie_banner.jpg",
     "director": "Gurmmeet Singh, Anand Iyer",
     "cast": "Pankaj Tripathi, Ali Fazal, Shweta Tripathi, Rasika Dugal",
     "storyline": "With Akhandanand Tripathi recovering in secrecy, Guddu Pandit and Golu seize control of the Purvanchal throne. Political betrayals, bloodbaths and shifting alliances threaten to unravel the kingdom of Mirzapur.",
@@ -344,7 +344,7 @@
       }
     ],
     "screenshots": [
-      "/src/assets/images/poster_historical_epic_1790591203848.jpg"
+      "/images/poster_historical_epic.jpg"
     ],
     "createdAt": "2024-12-20T16:00:00.000Z"
   },
@@ -360,8 +360,8 @@
     "audio": "Hindi + Korean (Dual Audio)",
     "subtitles": "English [ESub] + Hindi",
     "fileSize": "3.2 GB (Pack) / 500MB (Per Ep)",
-    "poster": "/src/assets/images/poster_action_sci_1790591190701.jpg",
-    "backdrop": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+    "poster": "/images/poster_action_sci.jpg",
+    "backdrop": "/images/hero_movie_banner.jpg",
     "director": "Hwang Dong-hyuk",
     "cast": "Lee Jung-jae, Lee Byung-hun, Wi Ha-joon, Im Si-wan",
     "storyline": "Three years after winning the deadly Squid Game, Player 456 Seong Gi-hun abandons his plans to go to the US and returns with a resolute purpose to dismantle the brutal game organization from within.",
@@ -391,7 +391,7 @@
       }
     ],
     "screenshots": [
-      "/src/assets/images/poster_action_sci_1790591190701.jpg"
+      "/images/poster_action_sci.jpg"
     ],
     "createdAt": "2024-12-18T09:00:00.000Z"
   },
@@ -407,8 +407,8 @@
     "audio": "Hindi (Clean Audio) + Tamil (Dual Audio)",
     "subtitles": "English [ESubs]",
     "fileSize": "2.2 GB / 1.1 GB / 500 MB",
-    "poster": "/src/assets/images/poster_detective_thriller_1790591214478.jpg",
-    "backdrop": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+    "poster": "/images/poster_detective_thriller.jpg",
+    "backdrop": "/images/hero_movie_banner.jpg",
     "director": "Nithilan Saminathan",
     "cast": "Vijay Sethupathi, Anurag Kashyap, Mamta Mohandas, Natarajan",
     "storyline": "A quiet barber visits a police station reporting the theft of 'Lakshmi', an ordinary iron dustbin. As baffled police unravel the case, a horrifying web of deception, vengeance, and ruthless retribution surfaces.",
@@ -447,7 +447,7 @@
       }
     ],
     "screenshots": [
-      "/src/assets/images/poster_detective_thriller_1790591214478.jpg"
+      "/images/poster_detective_thriller.jpg"
     ],
     "createdAt": "2024-12-15T08:00:00.000Z"
   }

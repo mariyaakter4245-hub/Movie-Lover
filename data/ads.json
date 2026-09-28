@@ -6,10 +6,10 @@
       "name": "Header Leaderboard Ad (728x90 / Responsive)",
       "position": "Under navigation bar, top of homepage and catalog",
       "enabled": true,
-      "type": "banner",
-      "bannerUrl": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1200&auto=format&fit=crop&q=80",
+      "type": "custom_html",
+      "bannerUrl": "/images/hero_movie_banner.jpg",
       "targetUrl": "https://moviebaaz.baby",
-      "customHtml": "<div style=\"background: linear-gradient(90deg, #1f1206, #3b200b); padding: 12px; border: 1px dashed #d97706; text-align: center; color: #fef3c7; font-size: 13px; font-weight: bold; border-radius: 6px;\"><span style=\"background:#b45309; padding: 2px 8px; border-radius: 4px; margin-right: 8px;\">HOT SPONSOR</span> Watch & Download Unlimited 4K Movies at 1Gbps! Fast GDrive Mirrors Online!</div>",
+      "customHtml": "<div style=\"background: linear-gradient(90deg, #1f1206, #3b200b); padding: 12px; border: 1px dashed #d97706; text-align: center; color: #fef3c7; font-size: 13px; font-weight: bold; border-radius: 8px;\"><span style=\"background:#b45309; padding: 2px 8px; border-radius: 4px; margin-right: 8px;\">HOT SPONSOR</span> Watch & Download Unlimited 4K Movies at 1Gbps! Fast GDrive Mirrors Online!</div>",
       "label": "Advertisement"
     },
     "infeed_grid": {
@@ -18,7 +18,7 @@
       "position": "Inserted seamlessly every 6th card in the movie browse grid",
       "enabled": true,
       "type": "banner",
-      "bannerUrl": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+      "bannerUrl": "/images/hero_movie_banner.jpg",
       "targetUrl": "https://t.me/moviebaaz_official",
       "customHtml": "<div style=\"background: #181920; border: 1px solid #374151; padding: 20px; border-radius: 12px; text-align: center;\"><p style=\"color: #f59e0b; font-weight: bold; font-size: 16px; margin-bottom: 6px;\">⚡ Join Official MovieBaaz Telegram</p><p style=\"color: #9ca3af; font-size: 12px;\">Get instant direct Google Drive & Mega download links before release.</p><a href=\"https://t.me/moviebaaz_official\" target=\"_blank\" style=\"display: inline-block; margin-top: 12px; background: #2563eb; color: #ffffff; padding: 6px 16px; border-radius: 6px; font-size: 12px; font-weight: bold; text-decoration: none;\">Join Channel Now</a></div>",
       "label": "Sponsored Content"

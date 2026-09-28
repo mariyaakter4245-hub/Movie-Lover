@@ -1,4 +1,5 @@
 import { Movie, AdsConfig, SiteSettings, MovieRequest } from '../types';
+import { INITIAL_MOVIES, INITIAL_ADS, INITIAL_SETTINGS } from '../data/defaultData';
 
 const STORAGE_KEYS = {
   MOVIES: 'moviebaaz_movies_cache',
@@ -18,18 +19,19 @@ export async function getMovies(): Promise<Movie[]> {
       return data;
     }
   } catch (err) {
-    console.warn('API error, falling back to local cache:', err);
+    console.warn('API error, falling back to local cache or defaults:', err);
   }
 
   const cached = localStorage.getItem(STORAGE_KEYS.MOVIES);
   if (cached) {
     try {
-      return JSON.parse(cached);
+      const parsed = JSON.parse(cached);
+      if (Array.isArray(parsed) && parsed.length > 0) return parsed;
     } catch (e) {
       console.error(e);
     }
   }
-  return [];
+  return INITIAL_MOVIES;
 }
 
 export async function createMovie(movie: Omit<Movie, 'id' | 'createdAt'> & { id?: string }): Promise<Movie> {
@@ -72,21 +74,27 @@ export async function bulkRestoreMovies(movies: Movie[]): Promise<boolean> {
 }
 
 // 2. Ads Config API
-export async function getAdsConfig(): Promise<AdsConfig | null> {
+export async function getAdsConfig(): Promise<AdsConfig> {
   try {
     const res = await fetch('/api/ads');
     if (!res.ok) throw new Error('Failed to fetch ads configuration');
     const data = await res.json();
-    localStorage.setItem(STORAGE_KEYS.ADS, JSON.stringify(data));
-    return data;
-  } catch (err) {
-    console.warn('Ads API error, using cache:', err);
-    const cached = localStorage.getItem(STORAGE_KEYS.ADS);
-    if (cached) {
-      try { return JSON.parse(cached); } catch (e) {}
+    if (data && data.slots) {
+      localStorage.setItem(STORAGE_KEYS.ADS, JSON.stringify(data));
+      return data;
     }
-    return null;
+  } catch (err) {
+    console.warn('Ads API error, using cache or initial:', err);
   }
+
+  const cached = localStorage.getItem(STORAGE_KEYS.ADS);
+  if (cached) {
+    try {
+      const parsed = JSON.parse(cached);
+      if (parsed && parsed.slots) return parsed;
+    } catch (e) {}
+  }
+  return INITIAL_ADS;
 }
 
 export async function saveAdsConfig(config: AdsConfig): Promise<AdsConfig> {
@@ -108,21 +116,27 @@ export async function recordAdClick(): Promise<void> {
 }
 
 // 3. Settings API
-export async function getSiteSettings(): Promise<SiteSettings | null> {
+export async function getSiteSettings(): Promise<SiteSettings> {
   try {
     const res = await fetch('/api/settings');
     if (!res.ok) throw new Error('Failed to fetch settings');
     const data = await res.json();
-    localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(data));
-    return data;
-  } catch (err) {
-    console.warn('Settings API error, using cache:', err);
-    const cached = localStorage.getItem(STORAGE_KEYS.SETTINGS);
-    if (cached) {
-      try { return JSON.parse(cached); } catch (e) {}
+    if (data && data.siteName) {
+      localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(data));
+      return data;
     }
-    return null;
+  } catch (err) {
+    console.warn('Settings API error, using cache or initial:', err);
   }
+
+  const cached = localStorage.getItem(STORAGE_KEYS.SETTINGS);
+  if (cached) {
+    try {
+      const parsed = JSON.parse(cached);
+      if (parsed && parsed.siteName) return parsed;
+    } catch (e) {}
+  }
+  return INITIAL_SETTINGS;
 }
 
 export async function saveSiteSettings(settings: Partial<SiteSettings>): Promise<SiteSettings> {

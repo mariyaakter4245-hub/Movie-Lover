@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Movie, AdsConfig, SiteSettings } from './types';
+import { INITIAL_MOVIES, INITIAL_ADS, INITIAL_SETTINGS } from './data/defaultData';
 import {
   getMovies, getAdsConfig, getSiteSettings,
   getStoredBookmarks, toggleStoredBookmark
@@ -17,9 +18,9 @@ import { AdBanner } from './components/AdBanner';
 import { Film, Shield, Send, ExternalLink, Heart } from 'lucide-react';
 
 export default function App() {
-  const [movies, setMovies] = useState<Movie[]>([]);
-  const [adsConfig, setAdsConfig] = useState<AdsConfig | null>(null);
-  const [settings, setSettings] = useState<SiteSettings | null>(null);
+  const [movies, setMovies] = useState<Movie[]>(INITIAL_MOVIES);
+  const [adsConfig, setAdsConfig] = useState<AdsConfig>(INITIAL_ADS);
+  const [settings, setSettings] = useState<SiteSettings>(INITIAL_SETTINGS);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [bookmarkedIds, setBookmarkedIds] = useState<string[]>([]);
 
