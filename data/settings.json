@@ -1,0 +1,30 @@
+{
+  "siteName": "MovieBaaz",
+  "siteDomain": "moviebaaz.baby",
+  "siteTagline": "Watch & Download HD Movies, Series & Dual Audio Free",
+  "telegramChannel": "https://t.me/moviebaaz_official",
+  "telegramGroup": "https://t.me/moviebaaz_chat",
+  "noticeText": "📢 Welcome to MovieBaaz.baby! How to download? Just click on any quality (480p, 720p, 1080p) and choose Fast Google Drive or HubCloud. Join our Telegram for daily updates!",
+  "noticeEnabled": true,
+  "adminPin": "admin123",
+  "allowUserRequests": true,
+  "requests": [
+    {
+      "id": "req-1",
+      "movieTitle": "Singham Again (2024)",
+      "requestedBy": "mariya@user.com",
+      "preferredQuality": "1080p FHD",
+      "status": "pending",
+      "date": "2025-01-09T14:22:00.000Z"
+    },
+    {
+      "id": "req-2",
+      "movieTitle": "Kantara: Chapter 1",
+      "requestedBy": "rahim@user.com",
+      "preferredQuality": "720p HD",
+      "status": "in-progress",
+      "date": "2025-01-08T09:15:00.000Z"
+    }
+  ],
+  "lastSynced": "2025-01-10T12:00:00.000Z"
+}

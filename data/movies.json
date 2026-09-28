@@ -1,0 +1,454 @@
+[
+  {
+    "id": "pushpa-2-the-rule-2024",
+    "title": "Pushpa 2: The Rule",
+    "year": 2024,
+    "category": "South Hindi Dubbed",
+    "genres": ["Action", "Crime", "Drama", "Thriller"],
+    "rating": 8.1,
+    "duration": "3h 24m",
+    "quality": "1080p WEB-DL",
+    "audio": "Hindi (Clean HQ) + Telugu (Dual Audio)",
+    "subtitles": "English [ESub]",
+    "fileSize": "2.8 GB / 1.4 GB / 650 MB",
+    "poster": "/src/assets/images/poster_historical_epic_1790591203848.jpg",
+    "backdrop": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+    "director": "Sukumar",
+    "cast": "Allu Arjun, Rashmika Mandanna, Fahadh Faasil, Sunil",
+    "storyline": "Pushpa Raj establishes an unassailable grip over the red sandalwood syndicate across international borders. However, Bhanwar Singh Shekhawat IPS vows retribution, sparking an explosive clash of dominance, power, and ego.",
+    "isFeatured": true,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/g3JUbgFBWu8",
+    "streamServers": [
+      { "name": "Server 1 (Fast HD)", "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" },
+      { "name": "Server 2 (Multi-Quality)", "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" },
+      { "name": "Server 3 (Ultra Speed)", "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "650 MB",
+        "resolution": "854x480",
+        "servers": [
+          { "name": "Fast Google Drive", "url": "https://moviebaaz.baby/download/pushpa2-480p-gdrive", "speed": "Lightning 100MB/s" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/pushpa2-480p-hubcloud", "speed": "High Speed" },
+          { "name": "Mega Server", "url": "https://moviebaaz.baby/download/pushpa2-480p-mega", "speed": "Fast" }
+        ]
+      },
+      {
+        "quality": "720p HD",
+        "size": "1.4 GB",
+        "resolution": "1280x720 (x264/HEVC)",
+        "servers": [
+          { "name": "Fast Google Drive", "url": "https://moviebaaz.baby/download/pushpa2-720p-gdrive", "speed": "Lightning 100MB/s" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/pushpa2-720p-hubcloud", "speed": "High Speed" },
+          { "name": "Fast Cloud Mirror", "url": "https://moviebaaz.baby/download/pushpa2-720p-cloud", "speed": "Fast" }
+        ]
+      },
+      {
+        "quality": "1080p FHD [Recommended]",
+        "size": "2.8 GB",
+        "resolution": "1920x1080 (10-Bit ESub)",
+        "servers": [
+          { "name": "Fast Google Drive (VIP)", "url": "https://moviebaaz.baby/download/pushpa2-1080p-gdrive", "speed": "Lightning 100MB/s" },
+          { "name": "HubCloud Ultra Direct", "url": "https://moviebaaz.baby/download/pushpa2-1080p-hubcloud", "speed": "High Speed" },
+          { "name": "1-Click Direct Link", "url": "https://moviebaaz.baby/download/pushpa2-1080p-direct", "speed": "Instant" }
+        ]
+      },
+      {
+        "quality": "4K UHD HDR",
+        "size": "7.2 GB",
+        "resolution": "3840x2160 Dolby Atmos",
+        "servers": [
+          { "name": "Torrent Magnet", "url": "magnet:?xt=urn:btih:moviebaaz-pushpa2-4k", "speed": "Peer-to-Peer" },
+          { "name": "Mega Direct VIP", "url": "https://moviebaaz.baby/download/pushpa2-4k-mega", "speed": "VIP Server" }
+        ]
+      }
+    ],
+    "screenshots": [
+      "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+      "/src/assets/images/poster_historical_epic_1790591203848.jpg"
+    ],
+    "createdAt": "2025-01-10T12:00:00.000Z"
+  },
+  {
+    "id": "kalki-2898-ad-2024",
+    "title": "Kalki 2898 AD",
+    "year": 2024,
+    "category": "South Hindi Dubbed",
+    "genres": ["Action", "Sci-Fi", "Fantasy", "Adventure"],
+    "rating": 7.8,
+    "duration": "3h 01m",
+    "quality": "1080p WEB-DL",
+    "audio": "Hindi (Original) + Telugu + Tamil",
+    "subtitles": "English [MSubs]",
+    "fileSize": "3.1 GB / 1.5 GB / 700 MB",
+    "poster": "/src/assets/images/poster_action_sci_1790591190701.jpg",
+    "backdrop": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+    "director": "Nag Ashwin",
+    "cast": "Prabhas, Amitabh Bachchan, Kamal Haasan, Deepika Padukone",
+    "storyline": "In the dystopian desert city of Kasi in the year 2898 AD, ruled by the tyrannical god-king Supreme Yaskin, a pregnant refugee carries the hope of humanity's rebirth as an ancient warrior rises to protect her.",
+    "isFeatured": true,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/kQDd1AhGIHk",
+    "streamServers": [
+      { "name": "Server 1 (Fast HD)", "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" },
+      { "name": "Server 2 (Multi-CDN)", "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "700 MB",
+        "resolution": "854x480",
+        "servers": [
+          { "name": "Fast Google Drive", "url": "https://moviebaaz.baby/download/kalki-480p-gdrive", "speed": "Fast" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/kalki-480p-hubcloud", "speed": "High Speed" }
+        ]
+      },
+      {
+        "quality": "720p HD HEVC",
+        "size": "1.5 GB",
+        "resolution": "1280x720",
+        "servers": [
+          { "name": "Fast Google Drive", "url": "https://moviebaaz.baby/download/kalki-720p-gdrive", "speed": "Lightning 100MB/s" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/kalki-720p-hubcloud", "speed": "High Speed" }
+        ]
+      },
+      {
+        "quality": "1080p FHD",
+        "size": "3.1 GB",
+        "resolution": "1920x1080 60FPS",
+        "servers": [
+          { "name": "Fast Google Drive (VIP)", "url": "https://moviebaaz.baby/download/kalki-1080p-gdrive", "speed": "Lightning 100MB/s" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/kalki-1080p-hubcloud", "speed": "High Speed" }
+        ]
+      }
+    ],
+    "screenshots": [
+      "/src/assets/images/poster_action_sci_1790591190701.jpg"
+    ],
+    "createdAt": "2025-01-08T10:00:00.000Z"
+  },
+  {
+    "id": "stree-2-2024",
+    "title": "Stree 2: Sarkate Ka Aatank",
+    "year": 2024,
+    "category": "Bollywood",
+    "genres": ["Comedy", "Horror"],
+    "rating": 7.4,
+    "duration": "2h 27m",
+    "quality": "1080p WEB-DL",
+    "audio": "Hindi (Dolby Digital 5.1)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "2.3 GB / 1.2 GB / 550 MB",
+    "poster": "/src/assets/images/poster_detective_thriller_1790591214478.jpg",
+    "backdrop": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+    "director": "Amar Kaushik",
+    "cast": "Rajkummar Rao, Shraddha Kapoor, Pankaj Tripathi, Abhishek Banerjee",
+    "storyline": "The quiet town of Chanderi is besieged by a terrifying headless ghost known as Sarkata, kidnapping progressive women. Vicky and his eccentric band of friends must team up with Stree to save their town.",
+    "isFeatured": true,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/KVnhe0eBf5w",
+    "streamServers": [
+      { "name": "Server 1 (Fast HD)", "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "550 MB",
+        "resolution": "854x480",
+        "servers": [
+          { "name": "Fast Google Drive", "url": "https://moviebaaz.baby/download/stree2-480p-gdrive", "speed": "Fast" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/stree2-480p-hubcloud", "speed": "High Speed" }
+        ]
+      },
+      {
+        "quality": "720p HD",
+        "size": "1.2 GB",
+        "resolution": "1280x720",
+        "servers": [
+          { "name": "Fast Google Drive", "url": "https://moviebaaz.baby/download/stree2-720p-gdrive", "speed": "Fast" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/stree2-720p-hubcloud", "speed": "High Speed" }
+        ]
+      },
+      {
+        "quality": "1080p FHD",
+        "size": "2.3 GB",
+        "resolution": "1920x1080",
+        "servers": [
+          { "name": "Fast Google Drive (VIP)", "url": "https://moviebaaz.baby/download/stree2-1080p-gdrive", "speed": "High Speed" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/stree2-1080p-hubcloud", "speed": "High Speed" }
+        ]
+      }
+    ],
+    "screenshots": [
+      "/src/assets/images/poster_detective_thriller_1790591214478.jpg"
+    ],
+    "createdAt": "2025-01-05T08:00:00.000Z"
+  },
+  {
+    "id": "toofan-2024-bengali",
+    "title": "Toofan (তুফান)",
+    "year": 2024,
+    "category": "Bengali Movies",
+    "genres": ["Action", "Crime", "Thriller"],
+    "rating": 7.9,
+    "duration": "2h 25m",
+    "quality": "1080p WEB-DL",
+    "audio": "Bengali (Clean Audio 5.1)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "2.1 GB / 1.1 GB / 450 MB",
+    "poster": "/src/assets/images/poster_detective_thriller_1790591214478.jpg",
+    "backdrop": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+    "director": "Raihan Rafi",
+    "cast": "Shakib Khan, Mimi Chakraborty, Chanchal Chowdhury, Nabila",
+    "storyline": "The ruthless rise and bloodstained criminal career of Galib, a reckless small-time criminal who ascends to become the most dreaded mafia don Toofan across the underworld of Bangladesh in the 1990s.",
+    "isFeatured": false,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/n43jXpI2W44",
+    "streamServers": [
+      { "name": "Server 1 (Fast HD)", "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "450 MB",
+        "resolution": "854x480",
+        "servers": [
+          { "name": "Fast Google Drive", "url": "https://moviebaaz.baby/download/toofan-480p-gdrive", "speed": "Fast" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/toofan-480p-hubcloud", "speed": "High Speed" }
+        ]
+      },
+      {
+        "quality": "720p HD",
+        "size": "1.1 GB",
+        "resolution": "1280x720",
+        "servers": [
+          { "name": "Fast Google Drive", "url": "https://moviebaaz.baby/download/toofan-720p-gdrive", "speed": "Fast" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/toofan-720p-hubcloud", "speed": "High Speed" }
+        ]
+      },
+      {
+        "quality": "1080p FHD",
+        "size": "2.1 GB",
+        "resolution": "1920x1080",
+        "servers": [
+          { "name": "Fast Google Drive (VIP)", "url": "https://moviebaaz.baby/download/toofan-1080p-gdrive", "speed": "Lightning 100MB/s" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/toofan-1080p-hubcloud", "speed": "High Speed" }
+        ]
+      }
+    ],
+    "screenshots": [
+      "/src/assets/images/poster_detective_thriller_1790591214478.jpg"
+    ],
+    "createdAt": "2025-01-02T14:00:00.000Z"
+  },
+  {
+    "id": "deadpool-and-wolverine-2024",
+    "title": "Deadpool & Wolverine",
+    "year": 2024,
+    "category": "Hollywood Dual Audio",
+    "genres": ["Action", "Adventure", "Comedy", "Sci-Fi"],
+    "rating": 7.7,
+    "duration": "2h 08m",
+    "quality": "1080p WEB-DL",
+    "audio": "Hindi (Clean DDP 5.1) + English (Dual Audio)",
+    "subtitles": "English [ESub] + Hindi",
+    "fileSize": "2.5 GB / 1.3 GB / 600 MB",
+    "poster": "/src/assets/images/poster_action_sci_1790591190701.jpg",
+    "backdrop": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+    "director": "Shawn Levy",
+    "cast": "Ryan Reynolds, Hugh Jackman, Emma Corrin, Matthew Macfadyen",
+    "storyline": "Wolverine is recovering from his injuries when he crosses paths with the loudmouth Deadpool. They team up to defeat a common enemy threatening the stability of their respective timelines.",
+    "isFeatured": false,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/73_1biulkYk",
+    "streamServers": [
+      { "name": "Server 1 (Fast HD)", "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "600 MB",
+        "resolution": "854x480",
+        "servers": [
+          { "name": "Fast Google Drive", "url": "https://moviebaaz.baby/download/deadpool-480p-gdrive", "speed": "Fast" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/deadpool-480p-hubcloud", "speed": "High Speed" }
+        ]
+      },
+      {
+        "quality": "720p HD Dual Audio",
+        "size": "1.3 GB",
+        "resolution": "1280x720",
+        "servers": [
+          { "name": "Fast Google Drive", "url": "https://moviebaaz.baby/download/deadpool-720p-gdrive", "speed": "Fast" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/deadpool-720p-hubcloud", "speed": "High Speed" }
+        ]
+      },
+      {
+        "quality": "1080p 10-Bit Dual Audio",
+        "size": "2.5 GB",
+        "resolution": "1920x1080",
+        "servers": [
+          { "name": "Fast Google Drive (VIP)", "url": "https://moviebaaz.baby/download/deadpool-1080p-gdrive", "speed": "Lightning 100MB/s" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/deadpool-1080p-hubcloud", "speed": "High Speed" }
+        ]
+      }
+    ],
+    "screenshots": [
+      "/src/assets/images/poster_action_sci_1790591190701.jpg"
+    ],
+    "createdAt": "2024-12-25T11:00:00.000Z"
+  },
+  {
+    "id": "mirzapur-season-3-2024",
+    "title": "Mirzapur (Season 3) Complete",
+    "year": 2024,
+    "category": "Web Series",
+    "genres": ["Action", "Crime", "Drama", "Thriller"],
+    "rating": 8.5,
+    "duration": "10 Episodes",
+    "quality": "720p / 1080p WEB-DL",
+    "audio": "Hindi (Original Audio)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "3.5 GB (Pack) / 350MB (Per Ep)",
+    "poster": "/src/assets/images/poster_historical_epic_1790591203848.jpg",
+    "backdrop": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+    "director": "Gurmmeet Singh, Anand Iyer",
+    "cast": "Pankaj Tripathi, Ali Fazal, Shweta Tripathi, Rasika Dugal",
+    "storyline": "With Akhandanand Tripathi recovering in secrecy, Guddu Pandit and Golu seize control of the Purvanchal throne. Political betrayals, bloodbaths and shifting alliances threaten to unravel the kingdom of Mirzapur.",
+    "isFeatured": false,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/5a4G3aD1hEU",
+    "streamServers": [
+      { "name": "Episode 1 to 10 Player", "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "720p Complete Zip Pack",
+        "size": "3.5 GB",
+        "resolution": "1280x720",
+        "servers": [
+          { "name": "Fast Google Drive Zip", "url": "https://moviebaaz.baby/download/mirzapur-s3-720p-zip", "speed": "Lightning 100MB/s" },
+          { "name": "HubCloud Batch", "url": "https://moviebaaz.baby/download/mirzapur-s3-720p-batch", "speed": "Fast" }
+        ]
+      },
+      {
+        "quality": "1080p FHD Batch Pack",
+        "size": "7.8 GB",
+        "resolution": "1920x1080",
+        "servers": [
+          { "name": "Fast Google Drive VIP", "url": "https://moviebaaz.baby/download/mirzapur-s3-1080p-gdrive", "speed": "Lightning 100MB/s" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/mirzapur-s3-1080p-hubcloud", "speed": "High Speed" }
+        ]
+      }
+    ],
+    "screenshots": [
+      "/src/assets/images/poster_historical_epic_1790591203848.jpg"
+    ],
+    "createdAt": "2024-12-20T16:00:00.000Z"
+  },
+  {
+    "id": "squid-game-season-2-2024",
+    "title": "Squid Game (Season 2) Dual Audio",
+    "year": 2024,
+    "category": "Web Series",
+    "genres": ["Action", "Drama", "Mystery", "Thriller"],
+    "rating": 8.2,
+    "duration": "6 Episodes",
+    "quality": "1080p WEB-DL",
+    "audio": "Hindi + Korean (Dual Audio)",
+    "subtitles": "English [ESub] + Hindi",
+    "fileSize": "3.2 GB (Pack) / 500MB (Per Ep)",
+    "poster": "/src/assets/images/poster_action_sci_1790591190701.jpg",
+    "backdrop": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+    "director": "Hwang Dong-hyuk",
+    "cast": "Lee Jung-jae, Lee Byung-hun, Wi Ha-joon, Im Si-wan",
+    "storyline": "Three years after winning the deadly Squid Game, Player 456 Seong Gi-hun abandons his plans to go to the US and returns with a resolute purpose to dismantle the brutal game organization from within.",
+    "isFeatured": false,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/Edw9b5a-jWc",
+    "streamServers": [
+      { "name": "Server 1 (All Episodes)", "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "720p Dual Audio Pack",
+        "size": "2.4 GB",
+        "resolution": "1280x720",
+        "servers": [
+          { "name": "Fast Google Drive", "url": "https://moviebaaz.baby/download/squidgame-s2-720p", "speed": "High Speed" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/squidgame-s2-hubcloud", "speed": "Fast" }
+        ]
+      },
+      {
+        "quality": "1080p FHD Dual Audio",
+        "size": "4.8 GB",
+        "resolution": "1920x1080",
+        "servers": [
+          { "name": "Fast Google Drive VIP", "url": "https://moviebaaz.baby/download/squidgame-s2-1080p", "speed": "Lightning 100MB/s" }
+        ]
+      }
+    ],
+    "screenshots": [
+      "/src/assets/images/poster_action_sci_1790591190701.jpg"
+    ],
+    "createdAt": "2024-12-18T09:00:00.000Z"
+  },
+  {
+    "id": "maharaja-2024-hindi-dubbed",
+    "title": "Maharaja",
+    "year": 2024,
+    "category": "South Hindi Dubbed",
+    "genres": ["Action", "Crime", "Drama", "Mystery"],
+    "rating": 8.5,
+    "duration": "2h 20m",
+    "quality": "1080p WEB-DL",
+    "audio": "Hindi (Clean Audio) + Tamil (Dual Audio)",
+    "subtitles": "English [ESubs]",
+    "fileSize": "2.2 GB / 1.1 GB / 500 MB",
+    "poster": "/src/assets/images/poster_detective_thriller_1790591214478.jpg",
+    "backdrop": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+    "director": "Nithilan Saminathan",
+    "cast": "Vijay Sethupathi, Anurag Kashyap, Mamta Mohandas, Natarajan",
+    "storyline": "A quiet barber visits a police station reporting the theft of 'Lakshmi', an ordinary iron dustbin. As baffled police unravel the case, a horrifying web of deception, vengeance, and ruthless retribution surfaces.",
+    "isFeatured": false,
+    "isTrending": true,
+    "trailerUrl": "https://www.youtube.com/embed/6iU6N9fO9Zg",
+    "streamServers": [
+      { "name": "Server 1 (Fast HD)", "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" }
+    ],
+    "downloadLinks": [
+      {
+        "quality": "480p SD",
+        "size": "500 MB",
+        "resolution": "854x480",
+        "servers": [
+          { "name": "Fast Google Drive", "url": "https://moviebaaz.baby/download/maharaja-480p-gdrive", "speed": "Fast" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/maharaja-480p-hubcloud", "speed": "High Speed" }
+        ]
+      },
+      {
+        "quality": "720p HD",
+        "size": "1.1 GB",
+        "resolution": "1280x720",
+        "servers": [
+          { "name": "Fast Google Drive", "url": "https://moviebaaz.baby/download/maharaja-720p-gdrive", "speed": "Fast" },
+          { "name": "HubCloud Direct", "url": "https://moviebaaz.baby/download/maharaja-720p-hubcloud", "speed": "High Speed" }
+        ]
+      },
+      {
+        "quality": "1080p FHD",
+        "size": "2.2 GB",
+        "resolution": "1920x1080",
+        "servers": [
+          { "name": "Fast Google Drive (VIP)", "url": "https://moviebaaz.baby/download/maharaja-1080p-gdrive", "speed": "Lightning 100MB/s" }
+        ]
+      }
+    ],
+    "screenshots": [
+      "/src/assets/images/poster_detective_thriller_1790591214478.jpg"
+    ],
+    "createdAt": "2024-12-15T08:00:00.000Z"
+  }
+]

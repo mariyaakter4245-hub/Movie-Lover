@@ -1,0 +1,76 @@
+{
+  "masterAdsEnabled": true,
+  "slots": {
+    "header_banner": {
+      "id": "header_banner",
+      "name": "Header Leaderboard Ad (728x90 / Responsive)",
+      "position": "Under navigation bar, top of homepage and catalog",
+      "enabled": true,
+      "type": "banner",
+      "bannerUrl": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1200&auto=format&fit=crop&q=80",
+      "targetUrl": "https://moviebaaz.baby",
+      "customHtml": "<div style=\"background: linear-gradient(90deg, #1f1206, #3b200b); padding: 12px; border: 1px dashed #d97706; text-align: center; color: #fef3c7; font-size: 13px; font-weight: bold; border-radius: 6px;\"><span style=\"background:#b45309; padding: 2px 8px; border-radius: 4px; margin-right: 8px;\">HOT SPONSOR</span> Watch & Download Unlimited 4K Movies at 1Gbps! Fast GDrive Mirrors Online!</div>",
+      "label": "Advertisement"
+    },
+    "infeed_grid": {
+      "id": "infeed_grid",
+      "name": "In-Feed Movie Grid Native Card",
+      "position": "Inserted seamlessly every 6th card in the movie browse grid",
+      "enabled": true,
+      "type": "banner",
+      "bannerUrl": "/src/assets/images/hero_movie_banner_1790591176417.jpg",
+      "targetUrl": "https://t.me/moviebaaz_official",
+      "customHtml": "<div style=\"background: #181920; border: 1px solid #374151; padding: 20px; border-radius: 12px; text-align: center;\"><p style=\"color: #f59e0b; font-weight: bold; font-size: 16px; margin-bottom: 6px;\">⚡ Join Official MovieBaaz Telegram</p><p style=\"color: #9ca3af; font-size: 12px;\">Get instant direct Google Drive & Mega download links before release.</p><a href=\"https://t.me/moviebaaz_official\" target=\"_blank\" style=\"display: inline-block; margin-top: 12px; background: #2563eb; color: #ffffff; padding: 6px 16px; border-radius: 6px; font-size: 12px; font-weight: bold; text-decoration: none;\">Join Channel Now</a></div>",
+      "label": "Sponsored Content"
+    },
+    "detail_top": {
+      "id": "detail_top",
+      "name": "Movie Details Page Header Ad",
+      "position": "Displayed right above player / storyline in the movie details view",
+      "enabled": true,
+      "type": "custom_html",
+      "bannerUrl": "",
+      "targetUrl": "https://moviebaaz.baby",
+      "customHtml": "<div style=\"background: #111319; border: 1px solid #1f2937; padding: 10px 16px; border-radius: 8px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;\"><div style=\"display:flex; align-items:center; gap: 8px;\"><span style=\"background:#dc2626; color:white; font-size:10px; font-weight:bold; padding:2px 6px; border-radius:4px;\">AD</span><span style=\"color:#e5e7eb; font-size:12px;\">High Speed Direct Cloud Mirror available for this movie!</span></div><a href=\"#download-section\" style=\"color:#fbbf24; font-size:12px; font-weight:bold; text-decoration:underline;\">Scroll to Download Links ↓</a></div>",
+      "label": "Partner Offer"
+    },
+    "detail_download_pre": {
+      "id": "detail_download_pre",
+      "name": "Above Download Buttons High-Conversion Ad",
+      "position": "Placed immediately above the 480p, 720p, 1080p download servers",
+      "enabled": true,
+      "type": "custom_html",
+      "bannerUrl": "",
+      "targetUrl": "https://moviebaaz.baby",
+      "customHtml": "<div style=\"background: #151821; border: 1px solid #f59e0b44; padding: 14px; border-radius: 8px; text-align: center; margin-bottom: 12px;\"><p style=\"color: #fbbf24; font-weight: 700; font-size: 13px; margin: 0 0 4px 0;\">🚀 1-Click Fast Direct Download Available (No Waiting Time)</p><p style=\"color: #9ca3af; font-size: 11px; margin: 0;\">Click any link below. If Google Drive quota is exceeded, use the HubCloud or Mega server mirrors.</p></div>",
+      "label": "Download Notice & Sponsor"
+    },
+    "floating_footer": {
+      "id": "floating_footer",
+      "name": "Sticky Footer Mobile & Desktop Ad",
+      "position": "Fixed at the bottom edge of the screen with dismiss button",
+      "enabled": false,
+      "type": "custom_html",
+      "bannerUrl": "",
+      "targetUrl": "https://moviebaaz.baby",
+      "customHtml": "<div style=\"display: flex; align-items: center; justify-content: center; gap: 12px; padding: 8px 16px; background: #0f172a; border-top: 1px solid #334155; color: #e2e8f0; font-size: 12px;\"><span>🔥 Latest South Indian Dubbed Movies in 1080p 60FPS!</span><a href=\"#\" style=\"background: #f59e0b; color: #000; font-weight: bold; padding: 4px 12px; border-radius: 4px; text-decoration: none;\">Explore</a></div>",
+      "label": "Bottom Sticky"
+    },
+    "popunder_script": {
+      "id": "popunder_script",
+      "name": "Popunder / Direct Link Ad Code Snippet",
+      "position": "Injected into public pages on first user click (Adsterra / PropellerAds format)",
+      "enabled": false,
+      "type": "script",
+      "bannerUrl": "",
+      "targetUrl": "https://example.com/direct-offer",
+      "customHtml": "<!-- Adsterra / PropellerAds popunder snippet -->\n<script type=\"text/javascript\">\n  // Put your Adsterra / PropellerAds JS script code here\n  console.log('Ad network popunder script loaded');\n</script>",
+      "label": "Ad Network Popunder"
+    }
+  },
+  "stats": {
+    "totalImpressions": 2840,
+    "totalClicks": 342,
+    "lastUpdated": "2025-01-10T12:00:00.000Z"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "MovieBaaz - HD Movies, Series & Dual Audio Portal",
+  "description": "Watch and download latest Bollywood, Hollywood Dual Audio, South Hindi Dubbed, Bengali Movies, and Web Series with full admin and ad-network management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
